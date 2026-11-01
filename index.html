@@ -1,1589 +1,912 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanvi Joshi | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Tanvi Joshi</title>
+<meta name="theme-color" content="#f4f6f7">
+<meta name="description" content="Tanvi Joshi: Corporate Affairs & Employee Engagement lead connecting ESG, compliance, people systems and brand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: the hub-and-spoke work map is the one bold moment; everything below is quiet, left-aligned, one section per node.
+   Colour: pale grey ground, ink, grey-blue for weight, mint for highlights. Type: Bricolage Grotesque display, Instrument Sans text.
+   Principles: labels only where they carry information; no decoration that the content doesn't ask for. */
+:root{
+  /* Palette: one ground, one ink, grey-blue and mint. Every colour on the page comes from this block. */
+  --bg:#f4f7f8;        /* page background */
+  --surface:#ffffff;   /* cards */
+  --band:#eaf1f3;      /* alternate section band */
+  --line:#dce5e9;      /* lines */
+  --shell:#e5edf0;     /* card trays */
+  --fg:#262f36;        /* main text */
+  --muted:#5c6b75;     /* secondary text */
+  --hub:#d6e8ec;       /* grey-blue, deep */
+  --slate:#3e5a72;     /* grey-blue, mid */
+  --slate-soft:#e5eef3;/* grey-blue, soft */
+  --mint:#b9dccf;      /* mint, dusty */
+  --mint-ink:#3a7362;  /* mint, deep (dusty) */
+  --mint-soft:#e7f2ee; /* mint, soft */
+  --hub-fg:#262f36; --on-dark-muted:#4a5d6b; --mint-hover:#a8d0c1;
+  /* area colours, all within the grey-blue / mint family */
+  --sage:#3a7362; --teal:#3f7f86; --cyan:#3e5a72; --red:#5f7a93; --yellow:#8197a8;
+  color-scheme:light;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --s-1:.8125rem; --s0:1rem; --s1:1.1875rem; --s2:1.5rem; --s3:2.25rem; --s4:clamp(2.75rem,7vw,5.25rem);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+a,button,.node{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.skip{position:absolute;left:max(16px,env(safe-area-inset-left,0px));top:-60px;z-index:20;background:var(--hub);color:var(--hub-fg);padding:10px 16px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform 160ms cubic-bezier(.23,1,.32,1)}
+.skip:focus{transform:translateY(76px)}
+body{background:var(--bg);color:var(--fg);font:400 var(--s0)/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.05}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+.mono{font-size:var(--s-1);font-variant-numeric:tabular-nums}
+.eyebrow{font-size:.95rem;font-weight:600;letter-spacing:0;color:var(--slate)}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:12px}
+.top b{font-family:var(--f-display);font-weight:800;font-size:1.05rem}
+.top nav{display:flex;gap:18px;flex-wrap:wrap}
+.top nav a{text-decoration:none;font-size:var(--s-1);color:var(--muted)}
+.top nav a:hover{color:var(--fg)}
+@media (max-width:720px){.top nav{display:none}}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding-block:56px 40px}
+.hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.hero h1{font-size:clamp(3rem,8vw,6.25rem);font-weight:800;letter-spacing:-.045em;line-height:.95}
+.hero h1 span{display:block;font-weight:400;font-size:clamp(1.15rem,2.2vw,1.6rem);letter-spacing:-.01em;color:var(--muted);margin-top:.5em;line-height:1.2}
+.hero .lede{font-size:var(--s1);max-width:46ch;color:var(--fg);line-height:1.55}
+.role{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.85rem;font-weight:500;padding:6px 12px;border-radius:999px;color:var(--fg);background:var(--slate-soft)}
+.chip:first-child{background:var(--mint-soft);color:var(--mint-ink)}
+.net{position:relative;min-width:0}
+.net svg{width:100%;height:auto;display:block;max-width:600px;margin-inline:auto;overflow:visible}
+.net .caption{margin:6px auto 0;max-width:460px;min-height:5.2em;padding:16px 18px;border-radius:14px;background:var(--surface);font-size:var(--s-1);color:var(--muted)}
+.net .caption strong{display:block;color:var(--fg);font-family:var(--f-display);font-size:1.05rem;margin-bottom:2px}
+.edge{stroke:var(--line);stroke-width:1.5;fill:none;transition:stroke .25s,opacity .25s}
+.edge.cross{stroke-dasharray:3 5}
+.node{cursor:pointer}
+.node circle.ring{fill:var(--surface);stroke-width:2.5;transition:r .25s}
+.node text{font-family:var(--f-body);font-weight:600;font-size:15px;fill:var(--fg);pointer-events:none}
+.node text.sub{font-family:var(--f-body);font-weight:500;font-size:11px;fill:var(--muted)}
+.node:hover circle.ring,.node:focus circle.ring,.node.on circle.ring{r:44}
+.dim .edge{opacity:.25}.dim .edge.lit{opacity:1}
+.hubc{fill:var(--hub)}
+.hubt{font-family:var(--f-display);font-weight:800;font-size:17px;fill:var(--hub-fg)}
+.hubs{font-family:var(--f-body);font-size:11px;font-weight:500;fill:var(--mint)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:36px 24px}.hero .lede{max-width:none}}
+
+.hero-act{display:flex;gap:10px;flex-wrap:wrap}
+.act{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--hub);color:var(--hub-fg);font-weight:600;text-decoration:none;transition:transform 140ms cubic-bezier(.23,1,.32,1),background-color 160ms ease}
+.act.ghost{background:var(--mint);color:var(--fg)}
+.act:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){.act:hover{background:var(--slate)}.act.ghost:hover{background:var(--mint-hover)}}
+
+/* proof strip */
+.proof{background:var(--surface)}
+.proof .wrap{display:grid;grid-template-columns:repeat(3,1fr);padding-block:0}
+.stat{padding:26px 20px 24px;display:flex;flex-direction:column;gap:6px;border-left:1px solid var(--line);min-width:0}
+.stat:nth-child(3n+1){border-left:0;padding-left:0}
+.stat:nth-child(n+4){border-top:1px solid var(--line)}
+.stat .n{font-family:var(--f-display);font-weight:800;font-size:clamp(2.2rem,4vw,3rem);color:var(--hub);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.stat .n small{font-size:.5em;font-weight:600;color:var(--mint-ink)}
+.stat p{font-size:var(--s-1);color:var(--muted);max-width:26ch}
+@media (max-width:860px){.proof .wrap{grid-template-columns:1fr 1fr}.stat{border-left:1px solid var(--line);padding-left:20px}.stat:nth-child(odd){border-left:0;padding-left:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:440px){.proof .wrap{grid-template-columns:1fr}.stat{border-left:0;padding-left:0}.stat+.stat{border-top:1px solid var(--line)}}
+
+/* node sections */
+.intro{padding-block:72px 8px}
+.intro .wrap{display:flex;flex-direction:column;gap:12px}
+.intro h2{font-size:var(--s3);font-weight:800;letter-spacing:-.025em;max-width:22ch}
+.intro p{color:var(--muted);max-width:60ch}
+.sec{padding-block:88px;scroll-margin-top:64px}
+.sec:nth-of-type(even){background:var(--band)}
+.sec:nth-of-type(even) .item{background:var(--surface)}
+.sec .wrap{display:grid;grid-template-columns:300px 1fr;gap:48px}
+.sec-head{display:flex;flex-direction:column;gap:14px;position:sticky;top:84px;align-self:start}
+.sec-head{flex-direction:column}
+.sec-head .dot{margin-bottom:2px}
+.dot{width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:0 0 0 5px color-mix(in srgb,var(--c) 22%,transparent);flex:none}
+.sec-head h2{font-size:var(--s3);font-weight:800;letter-spacing:-.025em}
+.sec-head .feeds{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.feeds .eyebrow{margin-bottom:2px}
+.link{display:flex;gap:10px;align-items:baseline;font-size:var(--s-1);color:var(--muted);text-decoration:none}
+.link i{width:8px;height:8px;border-radius:50%;background:var(--c);flex:none;transform:translateY(-1px)}
+.link:hover{color:var(--fg)}
+.link b{color:var(--fg);font-weight:600}
+.sec-body{display:flex;flex-direction:column;gap:28px;min-width:0}
+.sec-body .lead{font-family:var(--f-display);font-size:var(--s2);font-weight:400;line-height:1.3;letter-spacing:-.01em;max-width:32ch}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.item{padding:24px;border-radius:16px;background:var(--surface);display:flex;flex-direction:column;gap:8px;min-width:0}
+.item h3{font-size:1.15rem;font-weight:600;letter-spacing:-.01em;line-height:1.25}
+.item p,.item li{font-size:.95rem;color:var(--muted)}
+.item ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px}
+.item .k{color:var(--c);font-size:.85rem;font-weight:600}
+.item.wide{grid-column:1/-1}
+@media (max-width:860px){.sec .wrap{grid-template-columns:1fr;gap:28px}.sec-head{position:static}.items{grid-template-columns:1fr}}
+
+/* timeline (real chronological sequence) */
+.tl{list-style:none;margin:0;padding:0;border-left:2px solid color-mix(in srgb,var(--c) 45%,var(--line));display:flex;flex-direction:column;gap:18px}
+.tl li{position:relative;padding-left:22px;display:grid;grid-template-columns:110px 1fr;gap:14px;min-width:0}
+.tl li::before{content:"";position:absolute;left:-7px;top:.45em;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--c)}
+.tl li.big::before{background:var(--c)}
+.tl time{font-size:.88rem;font-weight:600;color:var(--muted);padding-top:.1em;font-variant-numeric:tabular-nums}
+.tl p{font-size:.97rem}
+.tl p b{font-weight:600}
+.tl li.next time{color:var(--c)}
+.tl li.next::before{border-style:dashed}
+@media (max-width:520px){.tl li{grid-template-columns:1fr;gap:2px}}
+
+.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badge{font-size:.85rem;font-weight:500;padding:7px 12px;border-radius:999px;background:color-mix(in srgb,var(--c) 12%,var(--surface));color:var(--fg);text-decoration:none;transition:background-color 160ms ease,transform 140ms cubic-bezier(.23,1,.32,1)}
+a.badge:hover{background:color-mix(in srgb,var(--c) 22%,var(--surface))}
+a.badge:active{transform:scale(.97)}
+.badge.pend{background:transparent;box-shadow:inset 0 0 0 1.5px var(--line);color:var(--muted)}
+
+/* principles */
+.principles{background:var(--mint-soft);color:var(--fg);padding-block:96px}
+.principles .wrap{display:flex;flex-direction:column;gap:36px}
+.principles .eyebrow{color:var(--muted)}
+.principles h2{font-size:var(--s3);font-weight:800;letter-spacing:-.025em}
+.prin{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.prin div{display:flex;flex-direction:column;gap:10px;border-top:3px solid var(--mint);padding-top:18px;min-width:0}
+.prin h3{font-size:var(--s2);font-weight:600;letter-spacing:-.015em}
+.prin p{color:var(--muted);font-size:.97rem;max-width:36ch}
+@media (max-width:760px){.prin{grid-template-columns:1fr}}
+
+/* next + toolkit */
+.closing{padding-block:72px}
+.closing .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.closing h2{font-size:var(--s2);font-weight:800;letter-spacing:-.02em;margin-bottom:18px}
+.nextlist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.nextlist li{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:14px 16px;margin-bottom:6px;border-radius:12px;background:var(--surface);font-size:.97rem}
+
+.nextlist time{font-size:.88rem;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.tk{display:flex;flex-direction:column;gap:18px}
+.tk-row{display:flex;flex-direction:column;gap:8px}
+.tk-row .badges .badge{--c:var(--muted)}
+@media (max-width:860px){.closing .wrap{grid-template-columns:1fr}}
+
+/* journey + education */
+.journey{padding-block:96px;--c:var(--slate)}
+.journey .wrap{display:grid;grid-template-columns:300px 1fr;gap:48px}
+.journey .head{display:flex;flex-direction:column;gap:14px}
+.journey h2{font-size:var(--s3);font-weight:800;letter-spacing:-.025em}
+.journey .head p{color:var(--muted)}
+.journey .body{display:flex;flex-direction:column;gap:28px;min-width:0}
+.journey .tl{border-left-color:var(--line)}
+.journey .tl li{grid-template-columns:120px 1fr}
+.journey .tl li::before{border-color:var(--slate)}
+.journey .tl li.big::before{background:var(--mint-ink);border-color:var(--mint-ink)}
+.journey .tl h3{font-size:1.1rem;font-weight:600;line-height:1.3}
+.journey .tl p{color:var(--muted);font-size:.95rem;margin-top:4px}
+.edu{padding:28px;border-radius:16px;background:var(--mint-soft);display:grid;grid-template-columns:auto 1fr;gap:6px 24px;align-items:baseline}
+.edu .big{font-family:var(--f-display);font-weight:800;color:var(--mint-ink);font-size:var(--s3);line-height:1;letter-spacing:-.03em;grid-row:span 3}
+.edu h3{font-size:1.2rem;font-weight:600}
+.edu p{color:var(--muted);font-size:.95rem}
+@media (max-width:860px){.journey .wrap{grid-template-columns:1fr;gap:28px}}
+@media (max-width:520px){.journey .tl li{grid-template-columns:1fr}.edu{grid-template-columns:1fr}.edu .big{grid-row:auto}}
+
+/* contact */
+.contact{background:var(--hub);color:var(--hub-fg);padding-block:96px}
+.contact .eyebrow{color:var(--mint)!important}
+.contact p{color:var(--on-dark-muted)!important}
+.contact .wrap{display:flex;flex-direction:column;gap:22px}
+.contact .eyebrow{color:var(--muted)}
+.contact h2{font-size:clamp(2.6rem,6vw,4.75rem);font-weight:800;letter-spacing:-.035em;max-width:14ch}
+.contact p{color:var(--muted);max-width:52ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.cta .addr{font-variant-numeric:tabular-nums;font-size:1rem;padding:12px 16px;background:color-mix(in srgb,var(--hub-fg) 10%,transparent);color:var(--hub-fg);border-radius:8px;user-select:all;overflow-wrap:anywhere}
+.btn{font:600 .95rem var(--f-body);padding:12px 20px;border-radius:999px;border:0;background:var(--mint);color:var(--fg);transition:transform 140ms cubic-bezier(.23,1,.32,1);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--hub-fg);box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--hub-fg) 45%,transparent)}
+.btn:active{transform:scale(.97)}
+.btn:hover{opacity:.88}
+
+/* photos */
+.shot{margin:0;border-radius:12px;overflow:hidden;background:var(--surface);display:flex;flex-direction:column;min-width:0}
+.shot img{display:block;width:100%;height:auto;max-width:100%;aspect-ratio:16/9;object-fit:cover}
+.shot.tall img{aspect-ratio:4/3}
+.shot.doc img{aspect-ratio:auto;object-fit:contain;background:#fff;max-height:420px}
+.shot figcaption{padding:10px 14px;font-size:var(--s-1);color:var(--muted)}
+.item .shot{margin-top:6px}
+.cert{display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:20px;align-items:center}
+.cert .shot img{aspect-ratio:auto;object-fit:contain;background:#fff}
+@media (max-width:520px){.cert{grid-template-columns:1fr}.cert .shot{max-width:220px}}
+/* status pills */
+.st{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--surface);color:var(--muted);white-space:nowrap}
+.st::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.st.done{color:var(--mint-ink)} .st.wip{color:var(--mint-ink);background:var(--mint-soft)} .st.wait{color:var(--slate);background:var(--slate-soft)} .st.plan{color:var(--muted)}
+.nextlist li{grid-template-columns:96px 1fr auto;align-items:baseline}
+@media (max-width:520px){.nextlist li{grid-template-columns:80px 1fr}.nextlist .st{grid-column:2}}
+
+footer{background:var(--hub);color:var(--hub-fg);padding-block:24px 40px;box-shadow:inset 0 1px 0 color-mix(in srgb,var(--hub-fg) 12%,transparent)}
+footer .wrap{color:var(--on-dark-muted)!important}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:var(--s-1)}
+
+/* motion */
+@keyframes rise{from{transform:translateY(10px);opacity:.001}to{transform:none;opacity:1}}
+.hero-copy>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy>*:nth-child(2){animation-delay:.08s}.hero-copy>*:nth-child(3){animation-delay:.16s}.hero-copy>*:nth-child(4){animation-delay:.24s}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-copy>*{animation:none}}
+
+
+/* orbit hero: five separate orbits */
+#netsvg{touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none}
+#netsvg.grabbing{cursor:grabbing}
+.ring-band{fill:color-mix(in srgb,var(--rc) 11%,var(--bg));stroke:none}
+.ring-band.alt{fill:color-mix(in srgb,var(--rc) 5%,var(--bg))}
+.ring-core{fill:var(--bg)}
+.ring-path{fill:none;stroke-width:1.6;stroke-opacity:.55;stroke-dasharray:1 6;stroke-linecap:round;transition:stroke-opacity 220ms ease,stroke-width 220ms ease}
+.ring-path.lit{stroke-opacity:.9;stroke-width:2.4}
+.spoke{stroke-width:1.5;opacity:0;transition:opacity 200ms ease}
+.spoke.show{opacity:.55}
+.hub .hubc{fill:var(--hub)}
+.hubt{font-family:var(--f-display);font-weight:800;font-size:22px;fill:var(--hub-fg)}
+.hubs{font-family:var(--f-body);font-size:12px;font-weight:500;fill:var(--mint)}
+.node{cursor:pointer;outline:none;transition:opacity 200ms ease}
+.node .pill{fill:var(--surface);stroke-width:1.5;stroke-opacity:.6;transition:stroke-opacity 200ms ease;filter:drop-shadow(0 8px 14px rgba(30,48,64,.10))}
+.node .plabel{font-family:var(--f-body);font-weight:600;font-size:15px;fill:var(--fg)}
+.node:hover .pill,.node:focus-visible .pill,.node.on .pill{stroke-opacity:1;stroke-width:2.5}
+.node:focus-visible .pill{stroke:var(--fg)!important}
+.dim .node:not(.on){opacity:.45}
+.dim .ring-path:not(.lit){stroke-opacity:.2}
+.ring-path.lit{stroke-dasharray:none}
+/* mini orbit that follows the page */
+.mini{position:fixed;z-index:15;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:10px;transition:opacity 240ms ease,transform 260ms cubic-bezier(.23,1,.32,1)}
+.mini.off{opacity:0;transform:translateY(14px) scale(.92);pointer-events:none}
+.mini svg{display:block;border-radius:50%;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 0 0 1px var(--ring),0 12px 28px -14px rgba(30,48,64,.35)}
+.m-ring{fill:none;stroke-width:1.4;stroke-opacity:.55}
+.m-hub{fill:var(--hub)}
+.m-dot{transition:r 200ms ease;stroke:var(--surface);stroke-width:1.2}
+.m-dot.on{r:9.5}
+.mini a:focus-visible .m-dot{stroke:var(--fg);stroke-width:2}
+.mini-lab{font-size:.8rem;font-weight:600;padding:6px 11px;border-radius:999px;background:var(--surface);box-shadow:0 0 0 1px var(--ring),0 8px 20px -12px rgba(30,48,64,.3);opacity:0;transform:translateX(6px);transition:opacity 200ms ease,transform 220ms cubic-bezier(.23,1,.32,1);white-space:nowrap}
+.mini.has .mini-lab{opacity:1;transform:none}
+@media (max-width:560px){.mini svg{width:52px;height:52px}.mini-lab{font-size:.75rem;padding:5px 10px}}
+@media (prefers-reduced-motion:reduce){.mini,.mini-lab{transition:none}}
+
+/* certificate slider */
+.certs{padding:20px;display:flex;flex-direction:column;gap:14px}
+.certs-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;gap:20px;scrollbar-width:none;overscroll-behavior-x:contain;border-radius:14px}
+.certs-track::-webkit-scrollbar{display:none}
+.cslide{margin:0;flex:0 0 100%;scroll-snap-align:start;display:grid;grid-template-columns:minmax(0,220px) 1fr;gap:24px;align-items:center;min-width:0}
+.cslide img{width:100%;height:auto;max-width:100%;border-radius:10px;background:#fff;box-shadow:0 0 0 1px var(--ring)}
+.cslide figcaption{display:flex;flex-direction:column;gap:8px;min-width:0}
+.cslide .k{color:var(--mint-ink)}
+.cmeta{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+.certs-nav{display:flex;align-items:center;justify-content:flex-end;gap:10px}
+.cbtn{width:40px;height:40px;border-radius:999px;border:0;display:grid;place-items:center;cursor:pointer;background:var(--pale-blue);color:var(--pale-blue-ink);transition:transform 160ms cubic-bezier(.23,1,.32,1),opacity 160ms ease}
+.cbtn svg{width:16px;height:16px}
+.cbtn:active{transform:scale(.94)}
+.cbtn:disabled{opacity:.35;cursor:default}
+.ccount{font-family:var(--f-mono);font-size:.85rem;color:var(--muted);min-width:3.5em;text-align:center;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.cslide{grid-template-columns:1fr}.cslide img{max-width:240px}}
+@media (prefers-reduced-motion:reduce){.certs-track{scroll-behavior:auto}}
+
+/* photo gallery */
+.gallery{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+.s-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;gap:20px;scrollbar-width:none;overscroll-behavior-x:contain}
+.s-track::-webkit-scrollbar{display:none}
+.gslide{margin:0;flex:0 0 100%;scroll-snap-align:start;display:flex;flex-direction:column;gap:12px;min-width:0}
+.gslide img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:14px;background:var(--shell);box-shadow:0 0 0 1px var(--ring)}
+.gslide figcaption{display:flex;flex-direction:column;gap:4px}
+.gslide figcaption h3{font-size:1.1rem}
+.gslide figcaption p{margin:0}
+.s-nav{display:flex;align-items:center;justify-content:flex-end;gap:10px}
+@media (prefers-reduced-motion:reduce){.s-track{scroll-behavior:auto}}
+
+.prin-head{display:flex;flex-direction:column;gap:14px;max-width:60ch}
+.prin-lede{font-size:clamp(1.15rem,1.8vw,1.4rem);line-height:1.45;color:var(--fg)}
+.prin{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:36px 48px!important}
+.prin p{max-width:52ch!important;line-height:1.6}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:8px}
+.prin-quote{margin:0;padding:4px 0 4px 24px;border-left:3px solid var(--mint);background:none;justify-content:space-between;display:flex;flex-direction:column;gap:12px}
+.prin-quote p{font-family:var(--f-display);font-weight:600;font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.3;letter-spacing:-.015em;color:var(--fg)}
+.prin-quote .by{display:block;font-style:normal;font-size:.9rem;font-weight:500;color:var(--muted)}
+.fd{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.fd>div{padding:24px 26px;border-radius:18px;background:var(--surface);display:flex;flex-direction:column;gap:8px;min-width:0}
+.fd>div:first-child{background:var(--hub);color:var(--hub-fg)}
+.fd>div:first-child h3{color:var(--mint)}
+.fd>div:first-child p{color:var(--on-dark-muted)}
+.fd h3{font-size:1.15rem}
+.fd p{margin:0;color:var(--muted)}
+.offclock{max-width:62ch;color:var(--muted)}
+.offclock b{color:var(--fg)}
+@media (max-width:760px){.prin,.fd,.quotes{grid-template-columns:1fr!important}}
+
+/* ===== Style layer: high-end visual design (soft structuralism) + minimalist UI ===== */
+:root{
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"Geist","Segoe UI",system-ui,sans-serif;
+  --f-mono:"Geist Mono",ui-monospace,Consolas,monospace;
+  --ring:rgba(31,45,58,.07); --ambient:0 30px 60px -36px rgba(30,48,64,.22);
+  --pale-blue:var(--slate-soft); --pale-blue-ink:var(--hub); --pale-mint:var(--mint-soft); --pale-mint-ink:var(--mint-ink);
+  --spring:cubic-bezier(.32,.72,0,1); --settle:cubic-bezier(.16,1,.3,1);
+}
+body{font-family:var(--f-body);color:var(--fg);letter-spacing:-.003em}
+/* faint light spots behind everything, fixed and inert */
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(48vw 40vw at 85% 8%,rgba(168,220,200,.22),transparent 70%),radial-gradient(42vw 36vw at 5% 55%,rgba(79,111,138,.10),transparent 70%)}
+body{isolation:isolate}
+h1,h2,h3{font-family:var(--f-display);font-weight:700}
+h3{font-family:var(--f-body);font-weight:600;letter-spacing:-.01em}
+.hero h1{font-weight:800;font-size:clamp(3.2rem,8.5vw,6.5rem);letter-spacing:-.045em;line-height:.95}
+.hero h1 span{font-family:var(--f-body);font-weight:500;letter-spacing:-.01em;color:var(--slate);margin-top:.7em}
+.intro h2,.sec-head h2,.journey h2,.principles h2,.closing h2,.contact h2{font-weight:700;letter-spacing:-.03em;line-height:1.05}
+.intro h2,.sec-head h2,.journey h2,.principles h2{font-size:clamp(2.2rem,4.2vw,3.25rem)}
+.closing h2{font-size:clamp(1.9rem,3vw,2.4rem)}
+.contact h2{font-size:clamp(2.8rem,7vw,5.25rem)}
+.sec-body .lead{font-family:var(--f-body);font-weight:400;font-size:clamp(1.25rem,2vw,1.5rem);line-height:1.4;letter-spacing:-.01em}
+.stat .n,.edu .big{font-family:var(--f-display);font-weight:800;letter-spacing:-.04em}
+.stat .n{font-size:clamp(2.6rem,4.6vw,3.6rem)}
+/* meta and dates in the data face */
+.tl time,.nextlist time,.mono{font-family:var(--f-mono);font-weight:400;font-size:.8rem;letter-spacing:.01em}
+/* microscopic pill eyebrows, only where they say something true */
+.tag-pill{align-self:flex-start;display:inline-flex;padding:5px 12px;border-radius:999px;background:var(--surface);box-shadow:0 0 0 1px var(--ring);
+  font:500 .68rem/1.2 var(--f-mono);text-transform:uppercase;letter-spacing:.16em;color:var(--slate)}
+.contact .tag-pill{background:color-mix(in srgb,var(--hub-fg) 10%,transparent);box-shadow:none;color:var(--mint)}
+/* floating island top bar */
+.top{top:calc(14px + env(safe-area-inset-top,0px));width:max-content;max-width:calc(100% - 32px);margin:14px auto 0;border-radius:999px;border:0;
+  background:color-mix(in srgb,var(--surface) 78%,transparent);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);box-shadow:0 0 0 1px var(--ring),0 12px 30px -18px rgba(30,48,64,.25)}
+.top .wrap{gap:22px;padding-block:8px;padding-left:22px;padding-right:8px;max-width:none}
+.top b{font-family:var(--f-display);font-weight:800;font-size:1.05rem;letter-spacing:-.02em}
+.top nav{gap:4px}
+.top nav a{padding:8px 12px;border-radius:999px;transition:background-color 200ms var(--spring),color 200ms ease}
+.top nav a:hover{background:var(--pale-blue);color:var(--fg)}
+.top-cta{order:3;display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;background:var(--hub);color:var(--hub-fg);font-weight:600;font-size:.9rem;text-decoration:none;transition:transform 160ms var(--spring)}
+.top-cta:active{transform:scale(.98)}
+@media (max-width:720px){.top .wrap{gap:14px;padding-left:18px}}
+@media (min-width:721px){.top-cta{display:none}}
+/* buttons: pills with the icon nested in its own circle */
+.act,.btn{gap:12px;padding:6px 6px 6px 22px;min-height:52px;border-radius:999px;display:inline-flex;align-items:center;transition:transform 220ms var(--spring),background-color 200ms ease}
+.btn:not(:has(.ico)){padding:0 22px}
+.act:active,.btn:active{transform:scale(.98)}
+.ico{width:38px;height:38px;border-radius:999px;display:grid;place-items:center;flex:none;background:color-mix(in srgb,currentColor 14%,transparent);transition:transform 320ms var(--spring)}
+.ico svg{width:16px;height:16px}
+@media (hover:hover) and (pointer:fine){.act:hover .ico,.btn:hover .ico{transform:translate(2px,-1px) scale(1.05)}}
+/* double-bezel: a soft outer tray around every card, concentric radii */
+.item,.edu,.net .caption{border-radius:22px;box-shadow:0 0 0 7px var(--shell),0 0 0 8px var(--ring),var(--ambient);background:var(--surface)}
+.sec:nth-of-type(even) .item{box-shadow:0 0 0 7px color-mix(in srgb,var(--surface) 55%,var(--band)),0 0 0 8px var(--ring),var(--ambient)}
+.items{gap:32px}
+.item{padding:28px 30px;transition:box-shadow 260ms var(--settle)}
+.item .shot{border-radius:14px;box-shadow:0 0 0 1px var(--ring)}
+.journey .shot{border-radius:18px;box-shadow:0 0 0 6px var(--shell),0 0 0 7px var(--ring)}
+.nextlist li{border-radius:16px;box-shadow:0 0 0 1px var(--ring)}
+/* pastel status tags */
+.st{font:500 .66rem/1.2 var(--f-mono);text-transform:uppercase;letter-spacing:.12em;padding:5px 10px}
+.st.wip{background:var(--pale-mint);color:var(--pale-mint-ink)} .st.wait{background:var(--pale-blue);color:var(--pale-blue-ink)} .st.plan{background:var(--shell);color:var(--muted)} .st.done{background:var(--pale-mint);color:var(--pale-mint-ink)}
+.chip{background:var(--pale-blue);color:var(--pale-blue-ink)} .chip:first-child{background:var(--pale-mint);color:var(--pale-mint-ink)}
+.badge{border-radius:999px}
+/* macro whitespace */
+.intro{padding-block:140px 16px}
+.sec{padding-block:128px}
+.journey,.principles,.closing,.contact{padding-block:136px}
+.hero .wrap{padding-block:96px 72px}
+@media (max-width:760px){.intro{padding-block:88px 8px}.sec,.journey,.principles,.closing,.contact{padding-block:80px}.hero .wrap{padding-block:56px 40px}.items{gap:24px}.item{padding:24px}}
+/* scroll entry: heavy, soft fade-up; visible if script never runs */
+html.js .rv{opacity:0;transform:translateY(28px);filter:blur(6px)}
+html.js .rv.in{opacity:1;transform:none;filter:none;transition:opacity 800ms var(--settle),transform 900ms var(--spring),filter 800ms var(--settle);transition-delay:var(--d,0ms)}
+@media (prefers-reduced-motion:reduce){html.js .rv{opacity:1;transform:none;filter:none}.ico,.act,.btn,.item{transition:none}}
+
+/* palette variant */
+:root{--pale-blue-ink:#3e5a72}
+.stat .n{color:#3e5a72}
+.act{background:#3e5a72!important;color:#fff!important}
+@media (hover:hover) and (pointer:fine){.act:hover{background:#334c61!important}.act.ghost:hover{background:var(--mint-hover)!important}}
+.act.ghost{background:var(--mint)!important;color:var(--fg)!important}
+.top-cta{background:#3e5a72;color:#fff}
+.fd>div:first-child h3,.contact .eyebrow,.contact .tag-pill{color:#3e5a72!important}
+.hub .hubc{fill:#3e5a72}
+.hub-halo{fill:var(--mint);fill-opacity:.22}
+.hub-ring{fill:none;stroke:var(--mint);stroke-width:2}
+.hubt{fill:#ffffff;font-size:24px;letter-spacing:-.02em}
+.hubs{fill:var(--mint);letter-spacing:.02em}
+body::after{background:radial-gradient(48vw 40vw at 85% 8%,rgba(214,232,236,.45),transparent 70%),radial-gradient(42vw 36vw at 5% 55%,rgba(185,220,207,.18),transparent 70%)}
+</style>
 
-        :root {
-            --slate-900: #0f172a;
-            --slate-800: #1e293b;
-            --slate-700: #334155;
-            --slate-600: #475569;
-            --slate-400: #94a3b8;
-            --slate-300: #cbd5e1;
-            --slate-200: #e2e8f0;
-            --slate-100: #f1f5f9;
-            --slate-50: #f8fafc;
-            --blue-600: #4a7ba7;
-            --blue-500: #5b8bc4;
-            --accent: #6b9fd9;
-            --blue-subtle: #5b8bc4;
-        }
-
-        body {
-            font-family: 'Work Sans', sans-serif;
-            background: linear-gradient(135deg, var(--slate-50) 0%, var(--slate-100) 100%);
-            color: var(--slate-800);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        /* Particle Canvas */
-        #particles-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-            opacity: 0.3;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Header with static criss-cross pattern */
-        header {
-            background: linear-gradient(135deg, var(--slate-900) 0%, var(--slate-800) 100%);
-            color: white;
-            padding: 6rem 0 8rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.03) 49%, rgba(255,255,255,0.03) 51%, transparent 52%),
-                linear-gradient(-45deg, transparent 48%, rgba(255,255,255,0.03) 49%, rgba(255,255,255,0.03) 51%, transparent 52%);
-            background-size: 60px 60px;
-            opacity: 1;
-            z-index: 0;
-        }
-
-        .header-bubble {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(96, 165, 250, 0.1);
-            border: 1px solid rgba(96, 165, 250, 0.2);
-            animation: floatBubble 15s infinite ease-in-out;
-        }
-
-        .bubble-1 { width: 80px; height: 80px; top: 20%; left: 10%; animation-delay: 0s; }
-        .bubble-2 { width: 120px; height: 120px; top: 50%; right: 15%; animation-delay: 3s; }
-        .bubble-3 { width: 60px; height: 60px; bottom: 20%; left: 30%; animation-delay: 6s; }
-        .bubble-4 { width: 100px; height: 100px; top: 30%; right: 25%; animation-delay: 9s; }
-        .bubble-5 { width: 70px; height: 70px; bottom: 30%; right: 40%; animation-delay: 12s; }
-
-        @keyframes floatBubble {
-            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-            25% { transform: translate(20px, -30px) scale(1.1); opacity: 0.8; }
-            50% { transform: translate(-15px, -20px) scale(0.9); opacity: 0.5; }
-            75% { transform: translate(25px, -15px) scale(1.05); opacity: 0.7; }
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 4.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--slate-300);
-            font-weight: 300;
-            letter-spacing: 0.05em;
-            margin-bottom: 2rem;
-        }
-
-        .tagline {
-            font-size: 1.1rem;
-            color: var(--slate-400);
-            max-width: 600px;
-            line-height: 1.8;
-            margin-top: 2rem;
-            border-left: 3px solid var(--accent);
-            padding-left: 1.5rem;
-        }
-
-        /* Navigation */
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(15, 23, 42, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            animation: slideDown 0.5s ease-out 0.3s both;
-            border-bottom: 1px solid var(--blue-subtle);
-        }
-
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            padding: 1.5rem 0;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--slate-700);
-            font-weight: 500;
-            font-size: 0.95rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--blue-600);
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--blue-600);
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        /* Sections with blue accents and floating elements */
-        section {
-            padding: 5rem 0;
-            position: relative;
-        }
-
-        section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(96, 165, 250, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(96, 165, 250, 0.02) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .section-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .section-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--slate-900);
-            margin-bottom: 3rem;
-            text-align: center;
-            letter-spacing: -0.02em;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background: var(--blue-subtle);
-            margin: 1.5rem auto 0;
-        }
-
-        /* About Section */
-        #about {
-            background: linear-gradient(to bottom, var(--slate-50), white);
-        }
-
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.9;
-            color: var(--slate-700);
-        }
-
-        .about-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .about-content p:first-child {
-            font-size: 1.3rem;
-            font-style: italic;
-            color: var(--blue-subtle);
-            font-weight: 500;
-        }
-
-        /* Timeline Section */
-        #timeline {
-            background: white;
-            border-top: 1px solid var(--slate-200);
-            border-bottom: 1px solid var(--slate-200);
-        }
-
-        .timeline-container {
-            position: relative;
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding: 2rem 0;
-            margin: 2rem 0;
-        }
-
-        .timeline-container::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .timeline-container::-webkit-scrollbar-track {
-            background: var(--slate-100);
-            border-radius: 10px;
-        }
-
-        .timeline-container::-webkit-scrollbar-thumb {
-            background: var(--blue-600);
-            border-radius: 10px;
-        }
-
-        .timeline-scroll {
-            display: flex;
-            gap: 3rem;
-            min-width: min-content;
-            padding: 1rem 2rem;
-        }
-
-        .timeline-chapter {
-            min-width: 450px;
-            background: white;
-            border: 1px solid var(--slate-200);
-            border-radius: 8px;
-            padding: 1.25rem 1.75rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .timeline-chapter::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 3px;
-            height: 100%;
-            background: var(--blue-600);
-        }
-
-        .timeline-chapter:hover {
-            border-color: var(--blue-600);
-            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.12);
-            transform: translateY(-3px);
-        }
-
-        .chapter-title {
-            font-family: 'Work Sans', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--slate-900);
-            margin-bottom: 0.3rem;
-        }
-
-        .chapter-years {
-            color: var(--slate-600);
-            font-weight: 500;
-            margin-bottom: 0.8rem;
-            font-size: 0.85rem;
-        }
-
-        .chapter-details {
-            color: var(--slate-700);
-            line-height: 1.6;
-            font-size: 0.9rem;
-        }
-
-        .chapter-details ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 0.5rem;
-        }
-
-        .chapter-details li {
-            padding-left: 1rem;
-            margin-bottom: 0.3rem;
-            position: relative;
-            font-size: 0.85rem;
-        }
-
-        .chapter-details li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--blue-600);
-            font-weight: 600;
-        }
-
-        /* Stats */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .stat-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 3px solid var(--blue-600);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, transparent 50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .stat-card:hover::before {
-            opacity: 1;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.2);
-        }
-
-        .stat-number {
-            font-family: 'Work Sans', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--blue-600);
-            margin-bottom: 0.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--slate-600);
-            font-weight: 500;
-            position: relative;
-            z-index: 1;
-        }
-
-        .stat-sublabel {
-            font-size: 0.75rem;
-            color: var(--slate-500);
-            margin-top: 0.5rem;
-            line-height: 1.4;
-        }
-
-        /* Projects Section */
-        #projects {
-            background: linear-gradient(to bottom, white, var(--slate-50));
-        }
-
-        /* Hero Image for Project Cards */
-        .project-hero {
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-            border-radius: 12px 12px 0 0;
-            margin: 0;
-            position: relative;
-            background: #f1f5f9;
-        }
-
-        .project-hero img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center;
-            display: block;
-            background: white;
-        }
-
-        .project-card-with-hero {
-            padding: 0 !important;
-            overflow: hidden;
-        }
-
-        .project-card-with-hero .project-header {
-            padding: 2rem 3rem 0 3rem;
-        }
-
-        .project-card-with-hero .project-description {
-            padding: 0 3rem;
-        }
-
-        .project-card-with-hero .project-details {
-            padding: 0 3rem;
-            margin-top: 2rem;
-        }
-
-        .project-card-with-hero .impact-metrics {
-            margin: 1.5rem 3rem 3rem 3rem;
-            padding: 1.5rem;
-        }
-
-        /* View Work Buttons */
-        .view-work-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .view-work-btn {
-            display: inline-block;
-            padding: 0.7rem 1.5rem;
-            background: var(--blue-600);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            border: 2px solid var(--blue-600);
-        }
-
-        .view-work-btn:hover {
-            background: var(--blue-500);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(74, 123, 167, 0.3);
-        }
-
-        .design-note {
-            color: var(--slate-600);
-            font-style: italic;
-            margin-top: 1rem;
-            padding: 1rem;
-            background: var(--slate-50);
-            border-radius: 6px;
-            font-size: 0.95rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 12px;
-            padding: 3rem;
-            margin-bottom: 3rem;
-            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
-            transition: all 0.4s ease;
-            border-left: 4px solid var(--slate-300);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(96, 165, 250, 0.03) 0%, transparent 50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-
-        .project-card:hover::before {
-            opacity: 1;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(37, 99, 235, 0.15), 0 0 0 1px var(--blue-600);
-            border-left-color: var(--blue-600);
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1.5rem;
-            gap: 2rem;
-        }
-
-        .project-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--slate-900);
-            margin-bottom: 0.5rem;
-        }
-
-        .project-tag {
-            background: var(--blue-600);
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            white-space: nowrap;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover .project-tag {
-            transform: scale(1.1);
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
-        }
-
-        .project-timeline {
-            color: var(--slate-600);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-
-        .project-description {
-            color: var(--slate-700);
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .project-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--slate-200);
-        }
-
-        .detail-section h4 {
-            font-weight: 600;
-            color: var(--slate-900);
-            margin-bottom: 0.75rem;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .detail-section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .detail-section li {
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-            position: relative;
-            color: var(--slate-700);
-            font-size: 0.95rem;
-        }
-
-        .detail-section li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--blue-600);
-            font-weight: 600;
-        }
-
-        .impact-metrics {
-            background: var(--slate-50);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 1.5rem;
-            transition: all 0.3s ease;
-            border-left: 3px solid var(--blue-600);
-        }
-
-        .project-card:hover .impact-metrics {
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.08);
-        }
-
-        .impact-metrics h4 {
-            color: var(--blue-600);
-            margin-bottom: 1rem;
-        }
-
-        .metric-item {
-            display: flex;
-            align-items: baseline;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .metric-value {
-            font-weight: 600;
-            color: var(--slate-900);
-        }
-
-        /* Skills Section */
-        #skills {
-            background: white;
-            border-top: 1px solid var(--slate-200);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .skill-category {
-            background: var(--slate-50);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 3px solid var(--blue-600);
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
-        }
-
-        .skill-category h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            color: var(--slate-900);
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .skill-tag {
-            background: white;
-            color: var(--slate-700);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            border: 1px solid var(--slate-200);
-        }
-
-        .skill-tag:hover {
-            background: var(--blue-600);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-            border-color: var(--blue-600);
-        }
-
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, var(--slate-900) 0%, var(--slate-800) 100%);
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        #contact::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.03) 49%, rgba(255,255,255,0.03) 51%, transparent 52%),
-                linear-gradient(-45deg, transparent 48%, rgba(255,255,255,0.03) 49%, rgba(255,255,255,0.03) 51%, transparent 52%);
-            background-size: 60px 60px;
-            opacity: 1;
-        }
-
-        #contact .section-title {
-            color: white;
-        }
-
-        #contact .section-title::after {
-            background: var(--accent);
-        }
-
-        .contact-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-text {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 3rem;
-            line-height: 1.8;
-            color: var(--slate-300);
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-link {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--blue-600);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-        }
-
-        .contact-link:hover {
-            background: var(--blue-500);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--slate-900);
-            color: var(--slate-400);
-            text-align: center;
-            padding: 2rem 0;
-            font-size: 0.9rem;
-            border-top: 1px solid var(--slate-700);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 { 
-                font-size: 2.5rem;
-                line-height: 1.2;
-            }
-            .section-title { 
-                font-size: 2rem;
-                line-height: 1.3;
-            }
-            .subtitle {
-                font-size: 1rem;
-                line-height: 1.5;
-            }
-            .tagline {
-                font-size: 1rem;
-                line-height: 1.6;
-            }
-            nav ul { 
-                gap: 1rem;
-                font-size: 0.8rem;
-                padding: 1rem 0;
-            }
-            .project-header { 
-                flex-direction: column;
-                align-items: start;
-            }
-            .project-title {
-                font-size: 1.5rem;
-                line-height: 1.3;
-            }
-            .project-details { 
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            #particles-canvas { display: none; }
-            .timeline-chapter { 
-                min-width: 280px;
-                max-width: 90vw;
-            }
-            .chapter-details li {
-                font-size: 0.85rem;
-                line-height: 1.5;
-                word-wrap: break-word;
-            }
-            .stats { 
-                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-                gap: 1rem;
-            }
-            .stat-card {
-                padding: 1.5rem 1rem;
-            }
-            .stat-number {
-                font-size: 2rem;
-            }
-            .stat-label {
-                font-size: 0.8rem;
-            }
-            .about-content {
-                font-size: 1rem;
-                line-height: 1.7;
-            }
-            .about-content p:first-child {
-                font-size: 1.1rem;
-            }
-            .contact-text {
-                font-size: 1rem;
-                line-height: 1.6;
-            }
-            .contact-link {
-                padding: 0.9rem 2rem;
-                font-size: 0.9rem;
-            }
-            .container {
-                padding: 0 1.5rem;
-            }
-            .project-hero {
-                height: 220px;
-            }
-            
-            .project-hero img {
-                object-fit: contain;
-            }
-            
-            .project-card-with-hero .project-header {
-                padding: 1.5rem 2rem 0 2rem;
-            }
-            
-            .project-card-with-hero .project-description {
-                padding: 0 2rem;
-            }
-            
-            .project-card-with-hero .project-details {
-                padding: 0 2rem;
-            }
-            
-            .project-card-with-hero .impact-metrics {
-                margin: 1.5rem 2rem 2rem 2rem;
-                padding: 1rem;
-            }
-            
-            .view-work-buttons {
-                flex-direction: column;
-            }
-            
-            .view-work-btn {
-                text-align: center;
-            }
-            
-            /* Prevent text overflow */
-            * {
-                word-wrap: break-word;
-                overflow-wrap: break-word;
-            }
-        }
-
-        /* Extra small screens */
-        @media (max-width: 480px) {
-            h1 { 
-                font-size: 2rem;
-            }
-            .section-title { 
-                font-size: 1.8rem;
-            }
-            nav ul {
-                gap: 0.8rem;
-                font-size: 0.75rem;
-            }
-            .timeline-chapter {
-                min-width: 260px;
-            }
-            .stats {
-                grid-template-columns: 1fr 1fr;
-            }
-            .project-card {
-                padding: 2rem 1.5rem;
-            }
-            .container {
-                padding: 0 1rem;
-            }
-        }
-
-        html { scroll-behavior: smooth; }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-    </style>
 </head>
 <body>
-    <canvas id="particles-canvas"></canvas>
-
-    <header>
-        <div class="header-bubble bubble-1"></div>
-        <div class="header-bubble bubble-2"></div>
-        <div class="header-bubble bubble-3"></div>
-        <div class="header-bubble bubble-4"></div>
-        <div class="header-bubble bubble-5"></div>
-        <div class="container header-content">
-            <h1>Tanvi Joshi</h1>
-            <p class="subtitle">Corporate Affairs & Employee Engagement Lead | ESG | Brand Strategy | Digital Transformation</p>
-            <p class="tagline">First-Class BA (Hons) in Global Business Management graduate, passionate about cultivating vibrant workplace culture, crafting strategies that resonate, and aligning business objectives with meaningful corporate initiatives.</p>
-        </div>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#timeline">Journey</a></li>
-            <li><a href="#projects">Work</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <b>Tanvi Joshi</b>
+    <a class="top-cta" href="#contact">Contact</a>
+    <nav aria-label="Sections">
+      <a href="#esg">ESG &amp; Compliance</a><a href="#people">People</a><a href="#org">Leadership</a><a href="#brand">Brand</a><a href="#comms">Communication</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
     </nav>
+  </div>
+</header>
 
-    <section id="about">
-        <div class="container section-content">
-            <h2 class="section-title">About</h2>
-            <div class="about-content">
-                <p>I work at the intersection of people, purpose, and perception.</p>
-                
-                <p>By title, I lead Corporate Affairs and Employee Engagement at a listed manufacturing company. In practice, I connect dots. Between leadership and employees. Between ESG commitments and meaningful action. Between what a company does and how it tells that story.</p>
-                
-                <p>My sweet spot sits between strategy and storytelling. I focus on the details most overlook, because that is where trust is built and reputations are shaped.</p>
-                
-                <p>A big part of how I work was shaped in London, where I moved when I was 17 with more ambition than certainty. Living independently in a city abroad where no one knew me forced me to figure out who I was without the safety net of familiarity. It sharpened my awareness, taught me to stay grounded while everything around me shifted, and proved that confidence doesn't need to be loud. Those years were more about building myself from scratch in a place that didn't hand out second chances than the degree itself.</p>
-                
-                <p>Today, I design strategic frameworks, streamline processes, coordinate ESG initiatives, and build engagement across internal and external stakeholders. I've helped Master Components Limited become Maharashtra's first MSME to achieve Zero Waste certification with DIN SPEC: 91436, grown LinkedIn followings from 100 to 1000+, and turned monthly townhalls into something employees actually look forward to.</p>
-            </div>
-            
-            <div class="stats">
-                <div class="stat-card">
-                    <div class="stat-number">₹18L+</div>
-                    <div class="stat-label">ESG Cost Savings</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">1000+</div>
-                    <div class="stat-label">LinkedIn Followers Gained</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">91%</div>
-                    <div class="stat-label">Average Employee<br>Engagement</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">30+</div>
-                    <div class="stat-label">Presentations Created</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">First</div>
-                    <div class="stat-label">MSME in Maharashtra</div>
-                    <div class="stat-sublabel">Silver Maturity<br>Zero Waste<br>DIN SPEC 91436</div>
-                </div>
-            </div>
+<main id="main">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="tag-pill">Portfolio, 2025–26</span>
+      <h1>Tanvi Joshi<span>Corporate Affairs &amp; Employee Engagement Lead</span></h1>
+      <p class="lede">Most stuck projects aren’t hard, they’re unowned. I find the gap, own the project and hold the thread until it closes. Then I build the system so it runs without me, check the details so it holds, and bring people along so it lasts.</p>
+      <div class="role">
+        <span class="chip">Master Components Limited</span>
+        <span class="chip">First-Class BA (Hons), Coventry University London</span>
+        <span class="chip">Sports enthusiast</span>
+        <span class="chip">Event management</span>
+      </div>
+      <div class="hero-act"><a class="act" href="#esg"><span>See the work</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M8 3.5v9M4 8.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="act ghost" href="#contact"><span>Get in touch</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M8 3.5v9M4 8.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+    </div>
+    <div class="net" id="net">
+      <svg viewBox="-80 -50 720 660" role="group" aria-label="My five areas of work, each on its own orbit around one role. Drag to spin; select an area to go to its section." id="netsvg"></svg>
+      <div class="caption" id="cap" aria-live="polite"><strong>Five areas, one role</strong>Point at an area to see what it covers, or drag to spin the orbit. Select an area to read the work.</div>
+    </div>
+  </div>
+</section>
+
+<section class="proof" aria-label="Key results">
+  <div class="wrap">
+    <div class="stat"><div class="n">8</div><p>Departments with an ESG champion each, in one cross-functional team (CFT) on Zero Waste to Landfill: implemented in 3 months, certified in 6. The first MSME in Maharashtra to be certified, now at Gold maturity.</p></div>
+    <div class="stat"><div class="n">40<small> → </small>55</div><p>EcoVadis score in a single assessment cycle</p></div>
+    <div class="stat"><div class="n">0</div><p>Non-conformities in our ISO 14001 and 45001 certification audit</p></div>
+    <div class="stat"><div class="n">₹18L+</div><p>Saved by negotiating the programme’s suppliers and services</p></div>
+    <div class="stat"><div class="n">95%</div><p>Of employees take part in engagement programmes</p></div>
+    <div class="stat"><div class="n">10×</div><p>Growth in company LinkedIn followers, from about 100 to 1,000+</p></div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <span class="tag-pill">Five areas, one role</span>
+    <h2>An enabler role touches every department. These are the five areas I run.</h2>
+    <p>Each area below lists the others it feeds. Most of my results come from those links: an audit closes clean because the documents, the people and the data were already in one place.</p>
+  </div>
+</section>
+
+<section class="sec" id="esg" style="--c:var(--sage)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="dot" aria-hidden="true"></span>
+      <h2>ESG &amp; Compliance</h2>
+      <div class="feeds"><div class="eyebrow">Feeds into</div>
+        <a class="link" href="#org" style="--c:var(--yellow)"><i></i><span><b>Leadership</b> · board-approved ESG and Safety committees</span></a>
+        <a class="link" href="#people" style="--c:var(--teal)"><i></i><span><b>People &amp; HR</b> · IATF HR procedure and safety awareness</span></a>
+        <a class="link" href="#comms" style="--c:var(--cyan)"><i></i><span><b>Communication</b> · policies and disclosures published</span></a>
+      </div>
+    </div>
+    <div class="sec-body">
+      <p class="lead">I run the ESG programme end to end, keep the environmental and occupational health and safety management systems audit-ready all year, and I’m building one integrated system for every certification.</p>
+      <div class="badges" aria-label="Certifications and qualifications">
+        <span class="badge">ISO 14001 · EMS</span><span class="badge">ISO 45001 · OH&amp;S</span><span class="badge">DIN SPEC 91436 · ZWL Gold</span><span class="badge">ISO 14064-1 · GHG verified</span><span class="badge">Certified internal auditor</span>
+      </div>
+      <ol class="tl" aria-label="ESG and compliance milestones in order">
+        <li><time>May 2025</time><p>Brought in an external ESG consultant and set up the structured programme.</p></li>
+        <li class="big"><time>Sep 2025</time><p><b>Zero Waste to Landfill</b> (DIN SPEC 91436, TÜV SÜD). The first MSME in Maharashtra to be certified.</p></li>
+        <li class="big"><time>Oct 2025</time><p><b>EcoVadis score 55</b>, up from 40 in the first assessment.</p></li>
+        <li><time>FY 2025-26</time><p>Board-approved ESG Committee and Safety Committee. ESG &amp; EHS Policy Manual approved and published. Voluntary BRSR disclosure under SEBI’s guidelines.</p></li>
+        <li class="big"><time>Aug 2026</time><p><b>Zero non-conformities</b> in the ISO 14001 and ISO 45001 certification audit.</p></li>
+        <li class="big"><time>Oct 2026</time><p><b>Upgraded to Gold maturity</b> for Zero Waste to Landfill: at least 95% of waste prevented, reused, recycled or composted.</p></li>
+        <li class="big"><time>Oct 2026</time><p><b>GHG inventory covering Scope 1, 2 and 3</b>, verified to ISO 14064-1 by BSCIC with an NABCB witness audit, at a reasonable level of assurance.</p></li>
+        <li class="next"><time>Oct 2026</time><p>Leading the third EcoVadis assessment.</p></li>
+      </ol>
+      <div class="items">
+        <div class="item wide certs" data-slider aria-roledescription="carousel" aria-label="Certificates">
+          <div class="certs-track s-track" tabindex="0">
+            <figure class="cslide" aria-roledescription="slide" aria-label="1 of 4">
+              <img src="img/cert-zwl-gold.jpg" alt="TÜV SÜD certificate: Master Components Limited, DIN SPEC 91436 Zero Waste, maturity level Gold, valid 14 October 2026 to 17 September 2028" loading="lazy" width="900" height="1273">
+              <figcaption><span class="k">TÜV SÜD · DIN SPEC 91436</span><h3>Zero Waste to Landfill, Gold maturity</h3><p>At least 95% of operational waste prevented, reused, recycled or composted. The first MSME in Maharashtra to be certified; upgraded from Silver to Gold in 2026.</p></figcaption>
+            </figure>
+            <figure class="cslide" aria-roledescription="slide" aria-label="2 of 4">
+              <img src="img/cert-ghg-14064.jpg" alt="BSCIC verification statement: Master Components Limited greenhouse gas inventory for 2025 verified to ISO 14064-1:2018" loading="lazy" width="900" height="1218">
+              <figcaption><span class="k">BSCIC · ISO 14064-1:2018</span><h3>GHG inventory, independently verified</h3><p>The 2025 greenhouse gas inventory, covering Scope 1, 2 and 3, verified at a reasonable level of assurance by an NABCB-accredited body.</p></figcaption>
+            </figure>
+            <figure class="cslide" aria-roledescription="slide" aria-label="3 of 4">
+              <img src="img/cert-iso14001.jpg" alt="BSCIC certificate: Master Components Ltd. environmental management system certified to ISO 14001:2015, both Nashik units" loading="lazy" width="900" height="1218">
+              <figcaption><span class="k">BSCIC · ISO 14001:2015</span><h3>Environmental management system</h3><p>Certified for both Nashik units, for the manufacture of plastic moulded components and sub-assemblies. Closed with zero non-conformities.</p></figcaption>
+            </figure>
+            <figure class="cslide" aria-roledescription="slide" aria-label="4 of 4">
+              <img src="img/cert-iso45001.jpg" alt="BSCIC certificate: Master Components Ltd. occupational health and safety management system certified to ISO 45001:2018, both Nashik units" loading="lazy" width="900" height="1218">
+              <figcaption><span class="k">BSCIC · ISO 45001:2018</span><h3>Occupational health and safety management system</h3><p>Certified for both Nashik units, in the same integrated audit. Closed with zero non-conformities.</p></figcaption>
+            </figure>
+          </div>
+          <div class="certs-nav s-nav">
+            <button type="button" class="cbtn s-prev" aria-label="Previous certificate"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <span class="ccount s-count" aria-live="polite">1 / 4</span>
+            <button type="button" class="cbtn s-next" aria-label="Next certificate"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
         </div>
-    </section>
+        <div class="item wide"><span class="k">Cross-functional</span><h3>One CFT, eight departments, ₹18L+ saved</h3><p>I appointed an ESG champion in each of eight departments and formed them into a cross-functional team (CFT). The champions handle the day-to-day ESG work and report to their own department heads, so the heads stay informed without being pulled into daily detail.</p>
+          <ul><li>Zero Waste to Landfill implemented in three months and fully certified in six</li><li>More than ₹18 lakh saved by negotiating the programme’s suppliers and services</li></ul></div>
+        <div class="item wide"><span class="k">EMS and OH&amp;S</span><h3>Management systems that stay audit-ready</h3><p>I coordinate the environmental (ISO 14001) and occupational health and safety (ISO 45001) management systems, with documentation, records and owners kept current as work happens.</p>
+          <ul><li>Certified internal auditor for ISO 14001 and ISO 45001</li><li>Controlled document numbering by department, type, sequence and revision</li><li>Evidence prepared ahead of each audit, so audit day holds no surprises</li></ul></div>
+        <div class="item wide"><span class="k">In progress</span><h3>One Integrated Management System for every certification</h3><p>Bringing ISO 14001, ISO 45001 and Zero Waste to Landfill together with the quality systems under one set of procedures, records and reviews. On quality (IATF 16949 and ISO 9001), my part is the HR requirements and the system integration. I’m also a certified IATF 16949 internal auditor.</p></div>
+        <div class="item"><span class="k">Regulatory</span><h3>EPR registration</h3><p>Registered the company with CPCB under Extended Producer Responsibility as an importer of raw material.</p></div>
+        <div class="item"><span class="k">Supply chain</span><h3>Supplier engagement</h3><p>Ran awareness outreach to suppliers on ZED certification, and coordinate Scope 3 data with internal owners such as purchasing.</p></div>
+        <div class="item wide"><span class="k">Compliance</span><h3>ESG compliance, end to end</h3><p>Every ESG-related compliance sits with me: the evidence, the submissions to ESG auditors and assessors, and the awareness that keeps teams across the plant on track.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="timeline">
-        <div class="container section-content">
-            <h2 class="section-title">The Backstory</h2>
-            <div class="timeline-container">
-                <div class="timeline-scroll">
-                    
-                    <div class="timeline-chapter">
-                        <h3 class="chapter-title">Foundation Years</h3>
-                        <p class="chapter-years">2018-2020</p>
-                        <div class="chapter-details">
-                            <ul>
-                                <li>Completed schooling and independently navigated international university applications, securing admission to 6 out of 6 universities across Europe</li>
-                                <li>Built early resilience, ownership, and long-term vision</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="timeline-chapter">
-                        <h3 class="chapter-title">London Chapter</h3>
-                        <p class="chapter-years">2020-2023</p>
-                        <div class="chapter-details">
-                            <ul>
-                                <li>Pursued graduation in London while balancing internships and part-time roles</li>
-                                <li>Developed global perspective, financial independence, and strong communication skills through academics, work, and co-curricular leadership</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="timeline-chapter">
-                        <h3 class="chapter-title">Professional Journey & Current Impact</h3>
-                        <p class="chapter-years">2023-Present</p>
-                        <div class="chapter-details">
-                            <ul>
-                                <li>Gained exposure in global B2B event operations and marketing, expanded into partnerships and influencer marketing in London, UK</li>
-                                <li>Now lead Corporate Affairs and Employee Engagement at an NSE-listed manufacturing company, driving ESG, communication, and culture initiatives in Nashik, India</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
+<section class="sec" id="people" style="--c:var(--teal)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="dot" aria-hidden="true"></span>
+      <h2>People &amp; HR</h2>
+      <div class="feeds"><div class="eyebrow">Feeds into</div>
+        <a class="link" href="#org" style="--c:var(--yellow)"><i></i><span><b>Leadership</b> · appraisals, ESOP and HRMS design</span></a>
+        <a class="link" href="#comms" style="--c:var(--cyan)"><i></i><span><b>Communication</b> · townhalls and staff announcements</span></a>
+        <a class="link" href="#esg" style="--c:var(--sage)"><i></i><span><b>ESG &amp; Compliance</b> · IATF HR procedure</span></a>
+      </div>
+    </div>
+    <div class="sec-body">
+      <p class="lead">I run employee engagement end to end and build the HR systems the company runs on, replacing paid software with tools I make myself.</p>
+      <div class="items">
+        <div class="item wide"><span class="k">Engagement, 95%</span><h3>A calendar people look forward to</h3><p>95% of employees take part in engagement programmes.</p>
+          <ul><li>12 monthly townhalls, recognised by leadership</li><li>The group’s first Sports League, Foundation Day and a leadership dinner</li><li>Employee of the Quarter, recognising people across departments</li><li>Leadership training, a blood donation camp, first aid training, POSH training and Quality Month</li><li>A financial literacy evening with CA Rachana Ranade</li></ul>
+          <div class="gallery" data-slider aria-roledescription="carousel" aria-label="Engagement events">
+            <div class="s-track" tabindex="0">
+            <figure class="gslide" aria-roledescription="slide" aria-label="1 of 10">
+              <img src="img/mplgroup.jpg" alt="Around sixty Master Group employees in matching team shirts and caps at the cricket ground" loading="lazy" width="1288" height="952" style="object-position:50% 45%">
+              <figcaption><h3>Master Premier League</h3><p>The group’s first sports league, a cricket tournament across the group companies.</p></figcaption>
+            </figure>
+            <figure class="gslide" aria-roledescription="slide" aria-label="2 of 10">
+              <img src="img/eng-foundation-day.jpg" alt="Master Components employees gathered at the factory gate for Foundation Day, many in matching white and gold saris" loading="lazy" width="1400" height="647" style="object-position:50% 40%">
+              <figcaption><h3>Foundation Day</h3><p>A celebration for the whole company, with teams from every department.</p></figcaption>
+            </figure>
+            <figure class="gslide" aria-roledescription="slide" aria-label="3 of 10">
+              <img src="img/eng-townhall.jpg" alt="Employees in uniform lined up on either side of a meeting room for a team game during a townhall" loading="lazy" width="960" height="1280" style="object-position:50% 40%">
+              <figcaption><h3>Monthly townhalls</h3><p>Twelve a year, recognised by leadership, with an activity to get everyone involved.</p></figcaption>
+            </figure>
+            <figure class="gslide" aria-roledescription="slide" aria-label="4 of 10">
+              <img src="img/eng-blood-donation.jpg" alt="Three employees smiling on recliner chairs while donating blood at the company camp" loading="lazy" width="1400" height="1050" style="object-position:50% 55%">
+              <figcaption><h3>Blood donation camp</h3><p>An on-site camp organised for employees to donate.</p></figcaption>
+            </figure>
+            <figure class="gslide" aria-roledescription="slide" aria-label="5 of 10">
+              <img src="img/eng-first-aid.jpg" alt="A trainer presenting first aid guidance in Marathi to employees, with a CPR mannequin on the desk" loading="lazy" width="1400" height="1050" style="object-position:50% 50%">
+              <figcaption><h3>First aid training</h3><p>Hands-on training for employees, with a CPR mannequin and the first aid rules in Marathi.</p></figcaption>
+            </figure>
+            <figure class="gslide" aria-roledescription="slide" aria-label="6 of 10">
+              <img src="img/eng-leadership-training.jpg" alt="A trainer leading an interactive leadership training session, with managers standing in two rows facing her" loading="lazy" width="800" height="1067" style="object-position:50% 45%">
+              <figcaption><h3>Leadership training</h3><p>An interactive session for managers and team leads on leading their teams.</p></figcaption>
+            </figure>
+            <figure class="gslide" aria-roledescription="slide" aria-label="7 of 10">
+              <img src="img/eng-quality-month.jpg" alt="A team presenting at the Kaizen competition during Quality Month, with poster entries on the table" loading="lazy" width="960" height="1280" style="object-position:50% 45%">
+              <figcaption><h3>Quality Month</h3><p>A Kaizen competition where teams presented their improvements to a judging panel.</p></figcaption>
+            </figure>
+            <figure class="gslide" aria-roledescription="slide" aria-label="8 of 10">
+              <img src="img/eng-posh.jpg" alt="A speaker leading a POSH awareness session for a room of employees" loading="lazy" width="1280" height="720" style="object-position:50% 50%">
+              <figcaption><h3>POSH training</h3><p>Awareness sessions on the prevention of sexual harassment at work.</p></figcaption>
+            </figure>
+            <figure class="gslide" aria-roledescription="slide" aria-label="9 of 10">
+              <img src="img/eng-financial-literacy.jpg" alt="CA Rachana Ranade on stage before a packed auditorium, with the audience holding up phone lights" loading="lazy" width="1400" height="933" style="object-position:50% 40%">
+              <figcaption><h3>Financial literacy evening</h3><p>Har Ghar Investor with CA Rachana Ranade, presented by Master Components in one of Nashik’s largest auditoriums.</p></figcaption>
+            </figure>
+            <figure class="gslide" aria-roledescription="slide" aria-label="10 of 10">
+              <img src="img/eng-leadership-dinner.jpg" alt="The leadership team and their families gathered for a group photo at the dinner" loading="lazy" width="1400" height="647" style="object-position:50% 45%">
+              <figcaption><h3>Leadership dinner</h3><p>An evening for the leadership team and their families.</p></figcaption>
+            </figure>
             </div>
-        </div>
-    </section>
+            <div class="s-nav"><button type="button" class="cbtn s-prev" aria-label="Previous photo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="ccount s-count" aria-live="polite">1 / 10</span><button type="button" class="cbtn s-next" aria-label="Next photo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+          </div></div>
+        <div class="item"><span class="k">Onboarding</span><h3>Hiring and onboarding formats</h3><p>10–15 standard forms, pre-boarding and onboarding checklists and hiring timelines. Onboarding used to take more than 7 days and is now shorter.</p></div>
+        <div class="item"><span class="k">Feedback</span><h3>One-on-ones, open to all</h3><p>A structured one-on-one format that any employee can use, for anything they need to raise.</p></div>
+        <div class="item wide"><span class="k">Built, in progress</span><h3>Open Positions system</h3><p>An automated tracker that takes every requisition form straight into one live list of open positions, with a summary dashboard so HR and senior management can see the hiring pipeline at a glance. It replaces a messy legacy sheet, built in-house instead of buying software.</p></div>
+        <div class="item"><span class="k">Oct 2026 onwards</span><h3>HR documents revamp</h3><p>A company-specific HR procedure, an HR Policy Manual modelled on the ESG manual, and one combined Code of Conduct &amp; Ethics.</p></div>
+        <div class="item"><span class="k">Toolkit</span><h3>A 41-point screening framework</h3><p>A reusable first-round assessment in six parts, plus a 10-point brief for candidates. Used for senior management hires.</p></div>
+        <div class="item"><span class="k">Analysis</span><h3>Workforce cost benchmarking</h3><p>Compared employee cost as a share of revenue against listed peers in plastics manufacturing, in three tiers, using published financials.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="projects">
-        <div class="container section-content">
-            <h2 class="section-title">What Moves the Needle</h2>
+<section class="sec" id="org" style="--c:var(--yellow)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="dot" aria-hidden="true"></span>
+      <h2>Leadership</h2>
+      <div class="feeds"><div class="eyebrow">Feeds into</div>
+        <a class="link" href="#people" style="--c:var(--teal)"><i></i><span><b>People &amp; HR</b> · structures, plans and systems</span></a>
+        <a class="link" href="#esg" style="--c:var(--sage)"><i></i><span><b>ESG &amp; Compliance</b> · governance committees</span></a>
+      </div>
+    </div>
+    <div class="sec-body">
+      <p class="lead">I help design how the organisation works: its structure, its people plans and the systems behind them.</p>
+      <div class="items">
+        <div class="item"><span class="k">Org design</span><h3>Structure and function design</h3><p>Designing the organisation’s structure and functions in collaboration with the VP and Strategy Head.</p></div>
+        <div class="item"><span class="k">ESOP</span><h3>ESOP design</h3><p>Designing the company’s employee stock option plan with the Company Secretary and the Strategy Head.</p></div>
+        <div class="item"><span class="k">My project</span><h3>Appraisal system design</h3><p>I lead the design of the company’s appraisal system, supported by my HR team. It will soon cover every employee.</p></div>
+        <div class="item"><span class="k">My project, next</span><h3>HRMS design</h3><p>I’ll lead the design of the company’s HRMS, including payroll, supported by my HR team.</p></div>
+        <div class="item wide"><span class="k">My team</span><h3>Structuring the functions in my own team</h3><p>As a leader, I’ve structured how the work in my function is owned: safety, ESG and admin each have a dedicated owner. I’m hiring an HR executive for projects and systems, and a management representative for EHS, ESG and IMS.</p></div>
+        <div class="item wide"><span class="k">Governance</span><h3>Committees, reviews and tracking</h3><p>Set up board-approved ESG and Safety committees, write the impact summary for the Monthly Review Meeting, and track roles, teams and functions in Sheets.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <!-- PROJECT 1: ESG -->
-            <div class="project-card project-card-with-hero">
-                <div class="project-hero">
-                    <img src="certificate_tuv_sud.png" alt="TÜV SÜD Zero Waste Certification">
-                </div>
-                <div class="project-header">
-                    <div>
-                        <h3 class="project-title">ESG Initiative & Zero Waste to Landfill (DIN SPEC 91436)</h3>
-                        <p class="project-timeline">Master Components Ltd | 2025</p>
-                    </div>
-                    <span class="project-tag">ESG Leadership</span>
-                </div>
-                <p class="project-description">
-                    Led comprehensive ESG transformation achieving Silver Maturity (≥90% waste prevention, reuse, recycling, composting/fermentation) in DIN SPEC 91436 certification. Collaborated across 8 departments to implement sustainability frameworks and drive measurable environmental impact.
-                </p>
-                <div class="project-details">
-                    <div class="detail-section">
-                        <h4>Key Achievements</h4>
-                        <ul>
-                            <li>Silver Maturity certification in 3 months (implementation)</li>
-                            <li>Complete certification achieved in 6 months</li>
-                            <li>EcoVadis score improvement: 44 → 55 (Phase 1)</li>
-                            <li>8-department cross-functional collaboration</li>
-                            <li>₹18+ lakh cost savings through strategic negotiations (Phase 2)</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <h4>Certification Details</h4>
-                        <ul>
-                            <li>DIN SPEC 91436: Silver Maturity Level</li>
-                            <li>≥90% waste diversion from landfill</li>
-                            <li>Comprehensive waste management systems</li>
-                            <li>Ongoing monitoring and optimization</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="impact-metrics">
-                    <h4>Historic Achievement</h4>
-                    <div class="metric-item">
-                        <span class="metric-value">Zero Waste to Landfill DIN SPEC: 91436</span>
-                        <span>First MSME in Maharashtra to achieve this certification</span>
-                    </div>
-                </div>
-            </div>
+<section class="sec" id="brand" style="--c:var(--red)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="dot" aria-hidden="true"></span>
+      <h2>Brand</h2>
+      <div class="feeds"><div class="eyebrow">Feeds into</div>
+        <a class="link" href="#comms" style="--c:var(--cyan)"><i></i><span><b>Communication</b> · one look across every channel</span></a>
+        <a class="link" href="#people" style="--c:var(--teal)"><i></i><span><b>People &amp; HR</b> · the internal portal</span></a>
+      </div>
+    </div>
+    <div class="sec-body">
+      <p class="lead">I own corporate branding for Master Group: how it looks, how it reads, and the rules that keep it consistent.</p>
+      <div class="items">
+        <div class="item wide"><span class="k">2025</span><h3>Brand refresh for Master Components Limited</h3><p>A storytelling-first refresh that improved the company’s branding across digital and printed touchpoints.</p>
+          <ul><li>Website revamp, with new design and content: 40% more traffic after the relaunch</li><li>Visiting cards revamped for the leadership team</li><li>A more consistent look across presentations, documents and social media</li></ul>
+          <figure class="shot"><img src="img/web.jpg" alt="The redesigned Master Group website home page, showing the moulding shop floor under the line Mastering Success With Master Group" loading="lazy" width="1400" height="752"></figure>
+          <div class="badges"><a class="badge" href="https://master-group.in" target="_blank" rel="noopener noreferrer">master-group.in</a></div></div>
+        <div class="item"><span class="k">In progress</span><h3>Brand guidelines revamp</h3><p>Revamping Master Group’s brand guidelines, including gradient palette sets for presentations and communications.</p></div>
+        <div class="item wide"><span class="k">Merchandise</span><h3>Branded products</h3><p>Designed and sourced Master Group merchandise: jerseys, caps, mugs, bottles, laptop bags, coasters and stickers.</p></div>
+        <div class="item"><span class="k">Launched</span><h3>Master Group internal portal</h3><p>One branded self-service page on the local server, next to the ERP, replacing scattered Drive folders.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <!-- PROJECT 2: Brand -->
-            <div class="project-card project-card-with-hero">
-                <div class="project-hero">
-                    <img src="website_screenshot.png" alt="Master Components Website">
-                </div>
-                <div class="project-header">
-                    <div>
-                        <h3 class="project-title">Brand Transformation & Digital Presence</h3>
-                        <p class="project-timeline">Master Components Ltd | 2025</p>
-                    </div>
-                    <span class="project-tag">Brand Strategy</span>
-                </div>
-                <p class="project-description">
-                    Revamped company branding with storytelling-first approach across digital and physical touchpoints. Managed complete brand refresh from website to visiting cards, establishing cohesive brand voice and significantly increasing digital engagement.
-                </p>
-                <div class="project-details">
-                    <div class="detail-section">
-                        <h4>Deliverables</h4>
-                        <ul>
-                            <li>10-15 visiting card designs for leadership</li>
-                            <li>30+ presentations (including AGM deck)</li>
-                            <li>Website redesign & content transformation</li>
-                            <li>LinkedIn strategy & execution</li>
-                            <li>Pitch decks for leadership presentations</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <h4>Measurable Impact</h4>
-                        <ul>
-                            <li>40% increase in website traffic post-revamp</li>
-                            <li>800+ new LinkedIn followers</li>
-                            <li>Higher employee engagement with posts</li>
-                            <li>Enhanced brand visibility across platforms</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="impact-metrics">
-                    <p class="design-note">📂 30+ presentations, visiting cards, and marketing materials created</p>
-                    <div class="view-work-buttons">
-                        <a href="https://master-group.in" target="_blank" rel="noopener noreferrer" class="view-work-btn">🔗 View Website</a>
-                        <a href="https://www.linkedin.com/company/master-components-limited/" target="_blank" rel="noopener noreferrer" class="view-work-btn">🔗 View LinkedIn</a>
-                    </div>
-                </div>
-            </div>
+<section class="sec" id="comms" style="--c:var(--cyan)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="dot" aria-hidden="true"></span>
+      <h2>Communication</h2>
+      <div class="feeds"><div class="eyebrow">Feeds into</div>
+        <a class="link" href="#brand" style="--c:var(--red)"><i></i><span><b>Brand</b> · one voice to match the look</span></a>
+        <a class="link" href="#people" style="--c:var(--teal)"><i></i><span><b>People &amp; HR</b> · engagement and townhall comms</span></a>
+        <a class="link" href="#esg" style="--c:var(--sage)"><i></i><span><b>ESG &amp; Compliance</b> · disclosures and awareness</span></a>
+      </div>
+    </div>
+    <div class="sec-body">
+      <p class="lead">I shape what the company says, inside and outside: LinkedIn, emails, newsletters, its annual report and its sustainability reporting.</p>
+      <div class="items">
+        <div class="item"><span class="k">External</span><h3>LinkedIn, 100 to 1,000+</h3><p>Strategy and content for the company page, which grew from about 100 followers to more than 1,000.</p>
+          <div class="badges"><a class="badge" href="https://www.linkedin.com/company/master-components-limited/" target="_blank" rel="noopener noreferrer">Company LinkedIn</a></div></div>
+        <div class="item"><span class="k">Internal and external</span><h3>Newsletters</h3><p>Issued as and when there’s a big update, for employees across the group and for external stakeholders.</p></div>
+        <div class="item"><span class="k">Internal and external</span><h3>Email drafting</h3><p>Staff announcements, townhall and engagement communications, launch messages and correspondence with external stakeholders.</p></div>
+        <div class="item"><span class="k">Reporting</span><h3>Annual report</h3><p>Design the company’s annual report and review the content of its management section, together with the Company Secretary’s team.</p></div>
+        <div class="item"><span class="k">ESG reporting</span><h3>Voluntary BRSR disclosure</h3><p>Prepared the company’s Business Responsibility and Sustainability Report, published voluntarily under SEBI’s guidelines.</p></div>
+        <div class="item wide"><span class="k">Presentations</span><h3>30+ decks for leadership</h3><p>Including the deck for the company’s Annual General Meeting, and leadership pitch decks.</p>
+          <figure class="shot tall"><img src="img/eng-agm.jpg" alt="Master Components’ leadership and team at the Annual General Meeting, with the AGM deck on screen behind them" loading="lazy" width="960" height="1280" style="aspect-ratio:4/3;object-position:50% 40%"><figcaption>At the Annual General Meeting, with the deck on screen</figcaption></figure></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <!-- PROJECT 3: HR -->
-            <div class="project-card">
-                <div class="project-header">
-                    <div>
-                        <h3 class="project-title">Organizational Optimization & HR Transformation</h3>
-                        <p class="project-timeline">Master Components Ltd | 2025</p>
-                    </div>
-                    <span class="project-tag">System Implementation</span>
-                </div>
-                <p class="project-description">
-                    Streamlined hiring and onboarding processes through systematic format creation and employee journey enhancement. Introduced pre-boarding frameworks and conducted comprehensive feedback sessions to optimize organizational efficiency.
-                </p>
-                <div class="project-details">
-                    <div class="detail-section">
-                        <h4>Systems Created</h4>
-                        <ul>
-                            <li>10-15 standardized forms & formats</li>
-                            <li>Pre-onboarding & onboarding checklists</li>
-                            <li>Overall hiring timeline frameworks</li>
-                            <li>One-on-one feedback structure</li>
-                            <li>Vendor & recruiter collaboration management</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <h4>Measurable Impact</h4>
-                        <ul>
-                            <li>Reduced onboarding time from 7+ days</li>
-                            <li>15+ employees: one-on-one feedback sessions (in process)</li>
-                            <li>Employee journey enhancement</li>
-                            <li>Systematic tracking & hiring timelines</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<section class="journey" id="journey">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag-pill">2018 to now</span>
+      <h2>How I got here</h2>
+      <p>I moved to London alone at 17, with more ambition than certainty. Building a life from scratch in a city where nobody knew me taught me to stay steady while everything around me changed, and that confidence doesn’t need to be loud.</p>
+    </div>
+    <div class="body">
+      <ol class="tl" aria-label="Career and education in order">
+        <li><time>2018–2020</time><div><h3>Applications, on my own</h3><p>Handled international university applications myself and received offers of admission from all six universities I applied to across Europe.</p></div></li>
+        <li class="big"><time>2020–2023</time><div><h3>Coventry University London</h3><p>A First-Class degree, earned alongside internships and part-time jobs.</p></div></li>
+        <li><time>2022–2023</time><div><h3>India Global Forum · UK-India Week 2023</h3><p>Ran speaker onboarding, registrations, guest logistics and social media for a five-day international conference: 150+ high-profile speakers, 1,000+ registrations and 22 sub-events, across 5+ databases in Cvent, Excel and SharePoint.</p>
+          <figure class="shot tall" style="margin-top:12px;max-width:420px"><img src="img/ukiw.jpg" alt="Queen Elizabeth II Centre in London with the UK-India Week 2023 banner over the entrance" loading="lazy" width="952" height="1288" style="aspect-ratio:4/3;object-position:50% 35%"></figure></div></li>
+        <li><time>Jul–Sep 2024</time><div><h3>Natter · Partnerships</h3><p>Built partnership and influencer strategy for a wellness platform with 190K+ social reach. Evaluated and contacted 100+ influencers and developed 20–30 partnerships.</p></div></li>
+        <li class="big"><time>Jan 2025 →</time><div><h3>Master Components Limited, Nashik</h3><p>Corporate Affairs &amp; Employee Engagement Lead at an NSE-listed manufacturer.</p></div></li>
+      </ol>
+      <div class="edu">
+        <div class="big">1st</div>
+        <h3>BA (Hons) Global Business Management, First Class</h3>
+        <p>Coventry University London · Sep 2020 – Sep 2023</p>
+        <p>Course Representative for all three years. Management &amp; HR Society. Marketing plan scored 81/100 and was selected for competition. Wrote my dissertation while working full-time.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <!-- PROJECT 4: Employee Engagement -->
-            <div class="project-card project-card-with-hero">
-                <div class="project-hero">
-                    <img src="mpl_cricket.jpg" alt="Master Premier League Cricket Tournament">
-                </div>
-                <div class="project-header">
-                    <div>
-                        <h3 class="project-title">Employee Engagement & Culture Building</h3>
-                        <p class="project-timeline">Master Components Ltd | 2025</p>
-                    </div>
-                    <span class="project-tag">Culture Development</span>
-                </div>
-                <p class="project-description">
-                    Built vibrant workplace culture through regular engagement programs, monthly townhalls, and the company's first-ever Sports League. Fostered collaboration, team building, and alignment to company goals through systematic initiatives.
-                </p>
-                <div class="project-details">
-                    <div class="detail-section">
-                        <h4>Programs Launched</h4>
-                        <ul>
-                            <li>12 monthly townhalls (special recognition received)</li>
-                            <li>Introduced & organized first Sports League in group companies</li>
-                            <li>Training programs with structured calendar</li>
-                            <li>POSH awareness sessions</li>
-                            <li>10 townhalls planned for FY 2025-26</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <h4>Measurable Impact</h4>
-                        <ul>
-                            <li>60 of 66 employees participating (91% engagement)</li>
-                            <li>Enhanced collaboration through sports league</li>
-                            <li>Aligned learning initiatives to organizational goals</li>
-                            <li>Systematic skill development frameworks</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<section class="principles" aria-label="How I work">
+  <div class="wrap">
+    <div class="prin-head">
+      <h2>How I work</h2>
+      <p class="prin-lede">My team says I panic for no reason. They also say the work arrives early. Both are true.</p>
+    </div>
+    <div class="prin">
+      <div><h3>Priorities before panic</h3><p>When a problem lands, I organise myself before anything else: priorities first, a time target for each, and I delegate what I can’t carry alone. Ideas start in a notebook and only move into a spreadsheet once they make sense.</p></div>
+      <div><h3>Early is on time</h3><p>If I’m delivering, it arrives before the deadline. If I’m waiting on you, I expect it on or before the day. The same goes for meetings: be on time, or you’ll hear from me. Good work needs a good flow, and that runs on respecting everyone’s time.</p></div>
+      <div><h3>I’ll find the extra space</h3><p>I review down to the last detail: a stray space, a misspelt word, a misaligned table. Nothing leaves my desk half-checked.</p></div>
+      <div><h3>Know the people before you lead them</h3><p>When I joined, I learned how every function worked before I asked anyone for anything. Everyone works differently, and understanding that is how I bring people along on projects that aren’t their day job.</p></div>
+    </div>
+    <div class="quotes">
+      <blockquote class="prin-quote"><p>“You’re dedicated, honest and result-oriented. You make sure the work crosses the finish line, in its goals and in its purpose.”</p><cite class="by">A colleague</cite></blockquote>
+      <blockquote class="prin-quote"><p>“You deep-dive into everything you decide to do, and work on it till it’s perfect.”</p><cite class="by">Another colleague</cite></blockquote>
+    </div>
+    <div class="fd">
+      <div><h3>What fuels me</h3><p>Ambition, and doing things properly. If I own a task, I deliver it with everything I’ve got, even the ones I don’t love. And events: the more moving parts, the more I enjoy them.</p></div>
+      <div><h3>What drains me</h3><p>Slow processes, slow decisions, and half-hearted work.</p></div>
+    </div>
+    <p class="offclock"><b>Off the clock.</b> Basketball taught me discipline and team instinct, running events taught me to stay calm under pressure, and watching football and tennis keeps my competitive streak healthy.</p>
+  </div>
+</section>
 
-            <!-- PROJECT 5: Natter -->
-            <div class="project-card">
-                <div class="project-header">
-                    <div>
-                        <h3 class="project-title">Digital Partnerships & Influencer Strategy</h3>
-                        <p class="project-timeline">Natter | Jul-Sep 2024</p>
-                    </div>
-                    <span class="project-tag">Partnerships</span>
-                </div>
-                <p class="project-description">
-                    Developed partnership strategies for wellness platform with 190K+ social media reach. Managed influencer outreach, data collection, and relationship building to expand platform visibility in digital wellness sector.
-                </p>
-                <div class="project-details">
-                    <div class="detail-section">
-                        <h4>Key Responsibilities</h4>
-                        <ul>
-                            <li>Partnership strategy development & execution</li>
-                            <li>Influencer identification & data-driven targeting</li>
-                            <li>Multi-channel outreach (email, Instagram, LinkedIn)</li>
-                            <li>Cross-functional collaboration with marketing teams</li>
-                            <li>Joint marketing campaign execution</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <h4>Learning Outcomes</h4>
-                        <ul>
-                            <li>20-30 partnerships successfully developed</li>
-                            <li>100+ influencers contacted and evaluated</li>
-                            <li>Strategic understanding of influencer marketing at scale</li>
-                            <li>Relationship management skills in digital partnerships</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<section class="closing" id="next">
+  <div class="wrap">
+    <div>
+      <h2>What I’m working on</h2>
+      <ul class="nextlist">
+        <li><time>Oct 2026</time><span>Third EcoVadis assessment</span><span class="st wip">In motion</span></li>
+        <li><time>Q4 2026</time><span>Open Positions tracker and dashboard</span><span class="st wip">In motion</span></li>
+        <li><time>Q4 2026</time><span>HR Policy Manual and Code of Conduct &amp; Ethics</span><span class="st wip">In motion</span></li>
+        <li><time>Now</time><span>Appraisal system design</span><span class="st wip">In motion</span></li>
+        <li><time>Upcoming</time><span>HRMS design, including payroll</span><span class="st plan">Up next</span></li>
+        <li><time>Now</time><span>One Integrated Management System for all certifications</span><span class="st wip">In motion</span></li>
+        <li><time>Now</time><span>Master Group brand guidelines revamp</span><span class="st wip">In motion</span></li>
+      </ul>
+    </div>
+    <div class="tk">
+      <div><h2>What I work with</h2></div>
+      <div class="tk-row"><span class="eyebrow">Frameworks &amp; standards</span><div class="badges"><span class="badge">EcoVadis</span><span class="badge">GHG Protocol · Scope 1–3</span><span class="badge">BRSR</span><span class="badge">EPR</span><span class="badge">ZED</span><span class="badge">ISO 14064-1</span><span class="badge">ISO 14001 &amp; 45001 internal auditor</span><span class="badge">IATF 16949 internal auditor</span></div></div>
+      <div class="tk-row"><span class="eyebrow">Systems &amp; tools</span><div class="badges"><span class="badge">Google Sheets systems</span><span class="badge">Google Forms</span><span class="badge">ERP</span><span class="badge">AI-assisted workflows</span></div></div>
+      <div class="tk-row"><span class="eyebrow">Practice</span><div class="badges"><span class="badge">Audit coordination</span><span class="badge">Policy drafting</span><span class="badge">Brand systems</span><span class="badge">Hiring frameworks</span><span class="badge">Org design</span></div></div>
+    </div>
+  </div>
+</section>
 
-            <!-- PROJECT 6: India Global Forum -->
-            <div class="project-card project-card-with-hero">
-                <div class="project-hero">
-                    <img src="uk_india_week.png" alt="UK-India Week 2023 Queen Elizabeth II Centre">
-                </div>
-                <div class="project-header">
-                    <div>
-                        <h3 class="project-title">High-Profile Event Management & Operations</h3>
-                        <p class="project-timeline">India Global Forum | 2022-2023</p>
-                    </div>
-                    <span class="project-tag">Event Management</span>
-                </div>
-                <p class="project-description">
-                    Collaborated with India Global Forum team on UK-India Week 2023 execution. Played core role in guest relations, logistics, social media marketing, registrations, and cross-team coordination for flagship international conference.
-                </p>
-                <div class="project-details">
-                    <div class="detail-section">
-                        <h4>Key Responsibilities</h4>
-                        <ul>
-                            <li>Speaker onboarding & profile management</li>
-                            <li>Social media presence & analytics tracking</li>
-                            <li>Database management (Cvent, Excel, SharePoint)</li>
-                            <li>Guest list coordination & logistics</li>
-                            <li>Schedule presentations for 6 programs</li>
-                            <li>Was exposed to guest relations, logistics, social media marketing, registrations</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <h4>Scale & Impact</h4>
-                        <ul>
-                            <li>150+ high-profile speakers managed</li>
-                            <li>1000+ registrations processed</li>
-                            <li>5+ databases operated simultaneously</li>
-                            <li>22 sub-events coordinated over 5-day conference</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="impact-metrics">
-                    <h4>Achievement</h4>
-                    <div class="metric-item">
-                        <span class="metric-value">UK-India Week 2023</span>
-                        <span>successful execution of major international event</span>
-                    </div>
-                </div>
-            </div>
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="tag-pill">Open to new roles</span>
+    <h2>Let’s work on something together.</h2>
+    <p>I’m open to roles, collaborations and conversations about ESG, organisational systems, and how companies connect what they do with what they say.</p>
+    <div class="cta">
+      <span class="addr" id="email">tanvijoshiwork@gmail.com</span>
+      <button class="btn" type="button" id="copy">Copy email</button>
+      <a class="btn ghost" href="https://linkedin.com/in/tanvi-joshi-b106b91aa" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M6 4.5h5.5V10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+</section>
 
-            <!-- PROJECT 7: Academic Undergraduate -->
-            <div class="project-card">
-                <div class="project-header">
-                    <div>
-                        <h3 class="project-title">Academic Excellence - Undergraduate</h3>
-                        <p class="project-timeline">Coventry University London | Sept 2020 - Sept 2023</p>
-                    </div>
-                    <span class="project-tag">Education</span>
-                </div>
-                <p class="project-description">
-                    First-Class BA (Hons) Distinction in Global Business Management from Coventry University London. Balanced rigorous academic performance with leadership roles and exposure of real-world business projects while working in internships.
-                </p>
-                <div class="project-details">
-                    <div class="detail-section">
-                        <h4>Academic Achievement</h4>
-                        <ul>
-                            <li>First-Class BA (Hons) Distinction</li>
-                            <li>Global Business Management</li>
-                            <li>Completed dissertation while working full-time</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <h4>Leadership & Projects</h4>
-                        <ul>
-                            <li>Course Representative throughout degree</li>
-                            <li>Management & HR Society member</li>
-                            <li>DMRi Marketing Plan: 81/100, selected for competition</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="impact-metrics">
-                    <h4>Skills Developed</h4>
-                    <div class="metric-item">
-                        <span class="metric-value">Strategic thinking, business analysis, cross-cultural communication, time management</span>
-                    </div>
-                </div>
-            </div>
+</main>
 
-            <!-- PROJECT 8: Academic High School & Community -->
-            <div class="project-card project-card-with-hero">
-                <div class="project-hero">
-                    <img src="rachana_ranade_event.jpg" alt="Rachana Ranade Financial Literacy Event">
-                </div>
-                <div class="project-header">
-                    <div>
-                        <h3 class="project-title">Foundation & Community Leadership</h3>
-                        <p class="project-timeline">2018-2020</p>
-                    </div>
-                    <span class="project-tag">Leadership</span>
-                </div>
-                <p class="project-description">
-                    Built strong foundation through academic excellence, athletic achievement, and community leadership initiatives. Demonstrated organizational, fundraising, and team management capabilities through large-scale event coordination, sports leadership, and social impact work.
-                </p>
-                <div class="project-details">
-                    <div class="detail-section">
-                        <h4>🎓 High School Achievement</h4>
-                        <ul>
-                            <li>84% Overall Score (2018-2020)</li>
-                            <li>Subject Proficiency Award: 94/100 in Secretarial Practice</li>
-                            <li>Basketball Vice Captain</li>
-                            <li>Won multiple singing competitions</li>
-                            <li>DSO (District Sports Office) level basketball, selected for state level</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <h4>🏆 Community Leadership</h4>
-                        <ul>
-                            <li>WHIS MUN: Core organizing team (500+ participants, ₹1L+ sponsorships)</li>
-                            <li>NIWEC Idol: Led team of 5 for singing competition</li>
-                            <li>Organized Rachana Ranade financial awareness event (major auditorium, company-sponsored)</li>
-                            <li>Interact Club member</li>
-                            <li>NGO work: Photography at Udaan NGO, event organization at Nashik Cyclists Pelotons</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<nav class="mini off" id="mini" aria-label="Jump to an area of work"><span class="mini-lab" id="minilab"></span><svg id="minisvg" viewBox="0 0 100 100" width="64" height="64"></svg></nav>
 
-        </div>
-    </section>
+<footer>
+  <div class="wrap"><span>Tanvi Joshi · Corporate Affairs &amp; Employee Engagement</span><span class="mono">Nashik, India. Updated October 2026</span></div>
+</footer>
 
-    <section id="skills">
-        <div class="container section-content">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Brand & Communications</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Brand Management</span>
-                        <span class="skill-tag">Strategic Communications</span>
-                        <span class="skill-tag">Content Strategy</span>
-                        <span class="skill-tag">Digital Marketing</span>
-                        <span class="skill-tag">Social Media Management</span>
-                        <span class="skill-tag">Internal Communications</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>ESG & Sustainability</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">ESG Reporting</span>
-                        <span class="skill-tag">Zero Waste Certification</span>
-                        <span class="skill-tag">Sustainability Frameworks</span>
-                        <span class="skill-tag">Corporate Social Responsibility</span>
-                        <span class="skill-tag">Environmental Compliance</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Operations & Strategy</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Project Management</span>
-                        <span class="skill-tag">Corporate Finance</span>
-                        <span class="skill-tag">Business Strategy</span>
-                        <span class="skill-tag">Organizational Development</span>
-                        <span class="skill-tag">Vendor Management</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Events & Partnerships</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Event Management</span>
-                        <span class="skill-tag">Partnership Development</span>
-                        <span class="skill-tag">Stakeholder Management</span>
-                        <span class="skill-tag">Influencer Relations</span>
-                        <span class="skill-tag">Logistics Coordination</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>HR & Employee Engagement</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Employee Engagement</span>
-                        <span class="skill-tag">Culture Building</span>
-                        <span class="skill-tag">Training & Development</span>
-                        <span class="skill-tag">POSH Compliance</span>
-                        <span class="skill-tag">Recruitment</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Technical & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">LinkedIn Analytics</span>
-                        <span class="skill-tag">Cvent</span>
-                        <span class="skill-tag">SharePoint</span>
-                        <span class="skill-tag">Data Collection & Analysis</span>
-                        <span class="skill-tag">Presentation Design</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="contact">
-        <div class="header-bubble bubble-1"></div>
-        <div class="header-bubble bubble-2"></div>
-        <div class="header-bubble bubble-3"></div>
-        <div class="header-bubble bubble-4"></div>
-        <div class="header-bubble bubble-5"></div>
-        <div class="container contact-content">
-            <h2 class="section-title">Let's Connect</h2>
-            <p class="contact-text">
-                Interested in discussing transformation projects, strategic initiatives, or the systems that shape how organizations work? I'm always up for collaborating with professionals who appreciate a mix of ambition, creativity, and hard work.
-            </p>
-            <div class="contact-links">
-                <a href="mailto:tanvijoshiwork@gmail.com" class="contact-link">Email Me</a>
-                <a href="https://linkedin.com/in/tanvi-joshi-b106b91aa" class="contact-link" target="_blank">LinkedIn</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Tanvi Joshi. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Particle system
-        const canvas = document.getElementById('particles-canvas');
-        const ctx = canvas.getContext('2d');
-        
-        function initCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        initCanvas();
-
-        const particles = [];
-        const particleCount = 60;
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 1;
-                this.speedX = Math.random() * 0.5 - 0.25;
-                this.speedY = Math.random() * 0.5 - 0.25;
-                this.opacity = Math.random() * 0.5 + 0.3;
-            }
-
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                if (this.x > canvas.width) this.x = 0;
-                if (this.x < 0) this.x = canvas.width;
-                if (this.y > canvas.height) this.y = 0;
-                if (this.y < 0) this.y = canvas.height;
-            }
-
-            draw() {
-                ctx.fillStyle = `rgba(37, 99, 235, ${this.opacity})`;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
-        }
-
-        function connectParticles() {
-            for (let i = 0; i < particles.length; i++) {
-                for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if (distance < 120) {
-                        ctx.strokeStyle = `rgba(37, 99, 235, ${0.15 * (1 - distance / 120)})`;
-                        ctx.lineWidth = 1;
-                        ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.stroke();
-                    }
-                }
-            }
-        }
-
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            particles.forEach(particle => {
-                particle.update();
-                particle.draw();
-            });
-
-            connectParticles();
-            requestAnimationFrame(animateParticles);
-        }
-
-        animateParticles();
-        window.addEventListener('resize', initCanvas);
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+<script>
+(function(){
+  document.querySelectorAll('[data-slider]').forEach(function(box){
+    var t=box.querySelector('.s-track'),sl=t.children,p=box.querySelector('.s-prev'),n=box.querySelector('.s-next'),c=box.querySelector('.s-count');
+    function idx(){return Math.round(t.scrollLeft/t.clientWidth)}
+    function upd(){var i=idx();c.textContent=(i+1)+' / '+sl.length;p.disabled=i===0;n.disabled=i===sl.length-1}
+    function go(i){t.scrollTo({left:i*t.clientWidth})}
+    p.addEventListener('click',function(){go(Math.max(0,idx()-1))});
+    n.addEventListener('click',function(){go(Math.min(sl.length-1,idx()+1))});
+    t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();n.click()}if(e.key==='ArrowLeft'){e.preventDefault();p.click()}});
+    var r;t.addEventListener('scroll',function(){cancelAnimationFrame(r);r=requestAnimationFrame(upd)},{passive:true});
+    addEventListener('resize',upd);upd();
+  });
+})();
+(function(){
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('js');
+  var els=document.querySelectorAll('.proof .stat,.intro .wrap>*,.sec-head,.sec-body>*,.items>.item,.journey .head,.journey .body>*,.prin>div,.closing .wrap>*,.contact .wrap>*');
+  els.forEach(function(el){var i=Array.prototype.indexOf.call(el.parentNode.children,el);el.classList.add('rv');el.style.setProperty('--d',Math.min(i,5)*80+'ms')});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(el){io.observe(el)});
+  setTimeout(function(){els.forEach(function(el){el.classList.add('in')})},3000);
+})();
+(function(){
+  var b=document.getElementById('copy'),e=document.getElementById('email');
+  b.addEventListener('click',function(){
+    function sel(){var r=document.createRange();r.selectNodeContents(e);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press Ctrl+C'}
+    try{navigator.clipboard.writeText(e.textContent).then(function(){b.textContent='Copied'},sel)}catch(x){sel()}
+    setTimeout(function(){b.textContent='Copy email'},2500);
+  });
+})();
+(function(){
+  var svg=document.getElementById('netsvg'), cap=document.getElementById('cap'), net=document.getElementById('net'), NS='http://www.w3.org/2000/svg';
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var C={x:280,y:280};
+  var nodes=[
+    {id:'people',name:'People & HR',c:'--teal',r:120,a:-122,sp:5,txt:'Engagement at 95%: townhalls, Foundation Day, Employee of the Quarter, the first Sports League, and HR systems I build myself.'},
+    {id:'org',name:'Leadership',c:'--yellow',r:154,a:30,sp:5,txt:'Org design, ESOP design, an appraisal system for every employee and, next, the HRMS.'},
+    {id:'esg',name:'ESG & Compliance',c:'--sage',r:188,a:-48,sp:5,txt:'EcoVadis 40 to 55, Zero Waste to Landfill at Gold maturity, GHG Scope 1, 2 and 3, EMS and OH&S with zero non-conformities, and one IMS for every certification.'},
+    {id:'brand',name:'Brand',c:'--red',r:222,a:118,sp:5,txt:'A brand refresh that revamped the website and visiting cards and lifted web traffic by 40%, plus a guidelines revamp and branded merchandise.'},
+    {id:'comms',name:'Communication',c:'--cyan',r:256,a:202,sp:5,txt:'LinkedIn from 100 to 1,000+ followers, newsletters, emails, 30+ leadership decks, the annual report and voluntary BRSR reporting.'}
+  ];
+  function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e}
+  var rings=el('g',{class:'rings'});
+  nodes.slice().reverse().forEach(function(n,i){
+    el('circle',{cx:C.x,cy:C.y,r:n.r+17,class:'ring-band'+(i%2?' alt':''),style:'--rc:var('+n.c+')'},rings);
+  });
+  el('circle',{cx:C.x,cy:C.y,r:103,class:'ring-core'},rings);
+  nodes.forEach(function(n){n.ring=el('circle',{cx:C.x,cy:C.y,r:n.r,class:'ring-path',style:'stroke:var('+n.c+')'},rings)});
+  var spoke=el('line',{x1:C.x,y1:C.y,x2:C.x,y2:C.y,class:'spoke'});
+  var gN=el('g',{});
+  var hub=el('g',{class:'hub'});
+  el('circle',{cx:C.x,cy:C.y,r:84,class:'hub-halo'},hub);
+  el('circle',{cx:C.x,cy:C.y,r:72,class:'hub-ring'},hub);
+  el('circle',{cx:C.x,cy:C.y,r:64,class:'hubc'},hub);
+  var t=el('text',{x:C.x,y:C.y+3,'text-anchor':'middle',class:'hubt'},hub);t.textContent='Tanvi';
+  var st=el('text',{x:C.x,y:C.y+24,'text-anchor':'middle',class:'hubs'},hub);st.textContent='The enabler';
+  var active=null;
+  nodes.forEach(function(n){
+    var g=el('g',{class:'node',tabindex:'0',role:'link','aria-label':n.name+'. '+n.txt+' Go to section.'},gN);n.g=g;
+    n.pill=el('rect',{class:'pill',rx:21,ry:21,height:42,style:'stroke:var('+n.c+')'},g);
+    n.dot=el('circle',{r:6.5,class:'pdot',style:'fill:var('+n.c+')'},g);
+    n.tx=el('text',{class:'plabel'},g);n.tx.textContent=n.name;
+    n.w=0;
+    function on(){active=n;svg.classList.add('dim');g.classList.add('on');n.ring.classList.add('lit');spoke.style.stroke='var('+n.c+')';spoke.classList.add('show');
+      cap.innerHTML='<strong style="color:var('+n.c+')"></strong>'+n.txt;cap.querySelector('strong').textContent=n.name}
+    function off(){active=null;svg.classList.remove('dim');g.classList.remove('on');n.ring.classList.remove('lit');spoke.classList.remove('show')}
+    n.on=on;n.off=off;
+    g.addEventListener('mouseenter',on);g.addEventListener('mouseleave',off);g.addEventListener('focus',on);g.addEventListener('blur',off);
+    n.go=function(){document.getElementById(n.id).scrollIntoView({behavior:RM?'auto':'smooth'})};
+    g.addEventListener('keydown',function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();n.go()}});
+  });
+  var K=1;
+  function measure(){K=svg.getBoundingClientRect().width<480?1.55:1;
+    nodes.forEach(function(n){n.tx.style.fontSize=(15*K)+'px';n.w=n.tx.getComputedTextLength()+50*K;
+      n.pill.setAttribute('height',42*K);n.pill.setAttribute('rx',21*K);n.pill.setAttribute('ry',21*K);n.dot.setAttribute('r',6.5*K)})}
+  measure();addEventListener('resize',function(){measure();place()});
+  function place(){nodes.forEach(function(n){
+    var r=n.a*Math.PI/180;n.x=C.x+n.r*Math.cos(r);n.y=C.y+n.r*Math.sin(r);
+    n.pill.setAttribute('width',n.w);n.pill.setAttribute('x',n.x-n.w/2);n.pill.setAttribute('y',n.y-21*K);
+    n.dot.setAttribute('cx',n.x-n.w/2+20*K);n.dot.setAttribute('cy',n.y);
+    n.tx.setAttribute('x',n.x-n.w/2+33*K);n.tx.setAttribute('y',n.y+5.5*K)});
+    if(active){spoke.setAttribute('x2',active.x);spoke.setAttribute('y2',active.y)}
+    if(window.__miniSync)window.__miniSync(nodes)}
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){measure();place()});
+  place();
+  // gentle drift on load, drag to spin, settle with inertia
+  var drift=RM?0:1, dragging=false, vel=0, last=performance.now(), driftUntil=last+14000, running=false;
+  function tick(now){var dt=Math.min(50,now-last)/1000;last=now;
+    var f=drift*(now<driftUntil?1:Math.max(0,1-(now-driftUntil)/2500));
+    if(!dragging&&!active){nodes.forEach(function(n){n.a+=n.sp*f*dt+vel*dt});vel*=Math.pow(.04,dt)}
+    place();
+    if(dragging||Math.abs(vel)>.5||f>0){requestAnimationFrame(tick)}else{running=false}}
+  function run(){if(!running){running=true;last=performance.now();requestAnimationFrame(tick)}}
+  run();
+  function ang(e){var b=svg.getBoundingClientRect(),vb=svg.viewBox.baseVal,x=vb.x+(e.clientX-b.left)*vb.width/b.width,y=vb.y+(e.clientY-b.top)*vb.height/b.height;return Math.atan2(y-C.y,x-C.x)*180/Math.PI}
+  var startA,prevA,prevT,moved,downNode;
+  svg.addEventListener('pointerdown',function(e){dragging=true;moved=0;vel=0;driftUntil=0;startA=prevA=ang(e);prevT=performance.now();
+    downNode=nodes.filter(function(n){return n.g.contains(e.target)})[0]||null;svg.setPointerCapture(e.pointerId);svg.classList.add('grabbing');run()});
+  svg.addEventListener('pointermove',function(e){if(!dragging)return;var a=ang(e),d=a-prevA;if(d>180)d-=360;if(d<-180)d+=360;
+    moved+=Math.abs(d);nodes.forEach(function(n){n.a+=d});var now=performance.now();vel=d/Math.max(.016,(now-prevT)/1000);prevA=a;prevT=now;place()});
+  function up(){if(!dragging)return;dragging=false;svg.classList.remove('grabbing');
+    if(moved<4){vel=0;if(downNode)downNode.go()}else if(RM){vel=0}else{vel=Math.max(-240,Math.min(240,vel))}run()}
+  svg.addEventListener('pointerup',up);svg.addEventListener('pointercancel',up);
+})();
+(function(){
+  // small orbit that follows you down the page
+  var NS='http://www.w3.org/2000/svg',mini=document.getElementById('mini'),svg=document.getElementById('minisvg'),lab=document.getElementById('minilab');
+  if(!mini)return;
+  var K=.17,C=50,dots={};
+  function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e}
+  var built=false,cur=null;
+  window.__miniSync=function(nodes){
+    if(!built){built=true;nodes.forEach(function(n){el('circle',{cx:C,cy:C,r:n.r*K+6,class:'m-ring',style:'stroke:var('+n.c+')'})});
+      el('circle',{cx:C,cy:C,r:12,class:'m-hub'});
+      nodes.forEach(function(n){var a=el('a',{href:'#'+n.id,'aria-label':n.name});var c=el('circle',{r:6,class:'m-dot',style:'fill:var('+n.c+')'},a);dots[n.id]={c:c,n:n}})}
+    nodes.forEach(function(n){var r=n.a*Math.PI/180,R=n.r*K+6;dots[n.id].c.setAttribute('cx',C+R*Math.cos(r));dots[n.id].c.setAttribute('cy',C+R*Math.sin(r))});
+  };
+  var hero=document.querySelector('.hero');
+  new IntersectionObserver(function(es){mini.classList.toggle('off',es[0].isIntersecting)},{threshold:0}).observe(hero);
+  var ids=['esg','people','org','brand','comms'];
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)set(e.target.id)})},{rootMargin:'-45% 0px -50% 0px'});
+  ids.forEach(function(id){io.observe(document.getElementById(id))});
+  var other=document.querySelectorAll('.journey,.principles,.closing,.contact,.intro,.proof');
+  var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)set(null)})},{rootMargin:'-45% 0px -50% 0px'});
+  other.forEach(function(x){io2.observe(x)});
+  function set(id){cur=id;Object.keys(dots).forEach(function(k){dots[k].c.classList.toggle('on',k===id)});
+    if(id){lab.textContent=dots[id].n.name;lab.style.color='var('+dots[id].n.c+')';mini.classList.add('has')}else{mini.classList.remove('has')}}
+})();
+</script>
 </body>
 </html>
