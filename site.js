@@ -17,8 +17,16 @@
   if(t0&&t0.closest('[data-view="case"]'))show('case',h0==='master-components'?null:h0);
   // method steps: pick a step, see it in the case
   var steps=document.querySelectorAll('.step'),egs=document.querySelectorAll('.eg-item');
+  var method=document.querySelector('.method'),dots=document.querySelectorAll('.dots i'),cur=0,pinQ=matchMedia('(min-height:540px)');
+  function setStep(i){cur=i;steps.forEach(function(x,j){x.setAttribute('aria-pressed',j===i)});egs.forEach(function(e,j){e.classList.toggle('on',j===i)});dots.forEach(function(d,j){d.classList.toggle('on',j<=i)})}
+  function pinned(){return method.classList.contains('pin')}
+  function span(){return method.offsetHeight-innerHeight}
+  function track(){if(!pinned()||!method.offsetParent)return;var p=-method.getBoundingClientRect().top/span(),i=Math.max(0,Math.min(3,Math.floor(p*4)));if(i!==cur)setStep(i)}
+  function pinSet(){method.classList.toggle('pin',pinQ.matches);track()}
+  pinSet();if(pinQ.addEventListener)pinQ.addEventListener('change',pinSet);
+  var tr;addEventListener('scroll',function(){cancelAnimationFrame(tr);tr=requestAnimationFrame(track)},{passive:true});
   steps.forEach(function(b){b.addEventListener('click',function(){var i=+b.getAttribute('data-i');
-    steps.forEach(function(x){x.setAttribute('aria-pressed',x===b)});egs.forEach(function(e,j){e.classList.toggle('on',j===i)})})});
+    if(pinned())scrollTo({top:method.getBoundingClientRect().top+scrollY+span()*(i+.5)/4});else setStep(i)})});
   // case rail: mark the section being read
   var rail=document.getElementById('rail'),links=rail.querySelectorAll('a'),map={};
   links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
@@ -42,7 +50,7 @@
   });
   // motion, skipped when the reader has asked for reduced motion
   if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
-    var rv=document.querySelectorAll('.steps,.eg,.cases .card,.blist li,.chapter .wrap,.gap,.quotes blockquote,.case-end');
+    var rv=document.querySelectorAll('.cases .card,.blist li,.chapter .wrap,.gap,.quotes blockquote,.case-end');
     var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
     rv.forEach(function(el){el.classList.add('rv');ro.observe(el)});
     function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,',')}
