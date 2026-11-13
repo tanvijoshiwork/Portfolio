@@ -157,7 +157,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 html.js [data-view]{display:none}
 html.js [data-view].on{display:block;animation:in 420ms var(--ease) both}
 @keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.s-track{scroll-behavior:auto}html.js [data-view].on,html.js .eg-item.on{animation:none}.btn,.s-btn,.step,.rail-links a{transition:none}}
+/* motion: hero lines arrive in order, sections rise as they are reached, numbers count up once */
+html.js .hero h1,html.js .hero .role,html.js .hero .pitch{animation:in 700ms var(--ease) both}
+html.js .hero .role{animation-delay:120ms}
+html.js .hero .pitch{animation-delay:240ms}
+html.js .rv{opacity:0;transform:translateY(18px);transition:opacity 600ms var(--ease),transform 600ms var(--ease)}
+html.js .rv.in{opacity:1;transform:none}
+.measures b,.heads b{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.s-track{scroll-behavior:auto}html.js [data-view].on,html.js .eg-item.on,html.js .hero h1,html.js .hero .role,html.js .hero .pitch{animation:none}html.js .rv{opacity:1;transform:none;transition:none}.btn,.s-btn,.step,.rail-links a{transition:none}}
 
 img.op40{object-position:50% 40%}
 img.op45{object-position:50% 45%}

@@ -40,6 +40,20 @@
     var r;t.addEventListener('scroll',function(){cancelAnimationFrame(r);r=requestAnimationFrame(upd)},{passive:true});
     addEventListener('resize',upd);box.addEventListener('sync',upd);upd();
   });
+  // motion, skipped when the reader has asked for reduced motion
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+    var rv=document.querySelectorAll('.steps,.eg,.cases .card,.blist li,.chapter .wrap,.gap,.quotes blockquote,.case-end');
+    var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    rv.forEach(function(el){el.classList.add('rv');ro.observe(el)});
+    function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,',')}
+    var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);
+      var el=e.target,full=el.textContent,m=full.match(/^(\D*?)(?:([\d,]+)( to ))?([\d,]+)(\D*)$/);if(!m)return;
+      var from=m[2]?+m[2].replace(/,/g,''):0,to=+m[4].replace(/,/g,''),pre=m[1]+(m[2]?m[2]+m[3]:''),t0=null;if(to===from)return;
+      function tick(t){if(t0===null)t0=t;var k=Math.min(1,(t-t0)/1100),v=Math.round(from+(to-from)*(1-Math.pow(1-k,3)));
+        el.textContent=pre+fmt(v)+m[5];if(k<1)requestAnimationFrame(tick);else el.textContent=full}
+      requestAnimationFrame(tick)})},{threshold:.6});
+    document.querySelectorAll('.measures b,.heads b').forEach(function(el){co.observe(el)});
+  }
   var b=document.getElementById('copy'),em=document.getElementById('email');
   b.addEventListener('click',function(){
     function sel(){var r=document.createRange();r.selectNodeContents(em);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press Ctrl+C'}
