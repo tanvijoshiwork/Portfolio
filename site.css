@@ -123,10 +123,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .quotes p{font:600 clamp(1.15rem,2vw,1.4rem)/1.35 var(--display);letter-spacing:-.015em}
 .quotes cite{font-style:normal;color:var(--muted);font-size:.92rem}
 @media (max-width:640px){.quotes{grid-template-columns:1fr}}
-.case-head{padding-block:clamp(40px,7vw,88px) clamp(36px,5vw,64px)}
+/* case opening: two full screens, each a pair of columns */
+.screen{min-height:calc(100svh - 64px);display:flex;flex-direction:column;justify-content:center;padding-block:clamp(32px,5vw,56px)}
+.screen.tint{background:var(--band)}
+.screen>.wrap{width:100%}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.screen.tint .split{align-items:start}
+.screen .chapter{padding-block:0}
+.screen .panel{background:var(--band);border-radius:26px;padding:clamp(22px,3vw,36px)}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
 .case-head .kicker{color:var(--blue);font-weight:600}
-.case-head h1{font-size:clamp(2.6rem,7vw,5.2rem);font-weight:800;letter-spacing:-.04em;line-height:.98;margin-top:10px}
-.case-head .dek{font-size:clamp(1.2rem,2.2vw,1.55rem);line-height:1.4;max-width:34ch;margin-top:24px}
+.case-head h1{font-size:clamp(2.5rem,5vw,4.2rem);font-weight:800;letter-spacing:-.04em;line-height:.98;margin-top:10px}
+.case-head .dek{font-size:clamp(1.15rem,1.9vw,1.4rem);line-height:1.45;max-width:34ch;margin-top:22px}
 .chapter{padding-block:clamp(40px,6vw,72px)}
 .chapter.tint{background:var(--band)}
 .chapter h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;margin-bottom:18px}

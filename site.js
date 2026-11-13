@@ -50,7 +50,7 @@
   });
   // motion, skipped when the reader has asked for reduced motion
   if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
-    var rv=document.querySelectorAll('.cases .card,.blist li,.chapter .wrap,.gap,.quotes blockquote,.case-end');
+    var rv=document.querySelectorAll('.cases .card,.blist li,.chapter .wrap,.screen .col,.gap,.quotes blockquote,.case-end');
     var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
     rv.forEach(function(el){el.classList.add('rv');ro.observe(el)});
     function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,',')}
