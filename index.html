@@ -7,7 +7,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Tanvi Joshi Portfolio</title>
 <meta name="theme-color" content="#f4f7f8">
-<meta name="description" content="Tanvi Joshi, Corporate Affairs &amp; Employee Engagement Lead at Master Components Limited. Case study inside.">
+<meta name="description" content="Tanvi Joshi, Corporate Affairs &amp; Employee Engagement Lead at Master Components Limited. Three projects inside.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&display=swap">
@@ -20,7 +20,9 @@
 <main id="main">
 
 <div data-view="home" class="on">
-  <section class="hero"><div class="wrap">
+  <section class="hero">
+    <div class="topbar"><div class="wrap"><a class="btn sm" href="#contact">Contact me</a></div></div>
+    <div class="wrap">
     <h1>Tanvi Joshi</h1>
     <p class="role">Corporate Affairs &amp; Employee Engagement Lead <span>Master Components Limited</span></p>
     <p class="pitch">When a company grows, new work appears that doesn’t belong to any one team yet. I’m drawn to that work. I start by asking questions, learn the subject properly, and build it with the people involved until it runs on its own.</p>
@@ -29,10 +31,10 @@
   <section class="method" aria-labelledby="mh"><div class="wrap">
     <h2 id="mh">How I work</h2>
     <ol class="steps" id="steps">
-      <li><button type="button" class="step" aria-pressed="true" data-i="0"><b>Listen first</b><span>I spend time with each department to understand how the work is done before I suggest anything.</span></button></li>
-      <li><button type="button" class="step" aria-pressed="false" data-i="1"><b>See what the company needs next</b><span>As a company grows, some work doesn’t sit with any team yet. That’s where I try to help.</span></button></li>
-      <li><button type="button" class="step" aria-pressed="false" data-i="2"><b>Learn the subject</b><span>I’m often new to it. I ask questions, study, and get qualified where I can.</span></button></li>
-      <li><button type="button" class="step" aria-pressed="false" data-i="3"><b>Build it together</b><span>Nothing I’ve delivered was mine alone. A system only works when the people running it see why it’s worth it.</span></button></li>
+      <li><button type="button" class="step" aria-pressed="true" data-i="0"><b>Assess first</b><span>I spend time with each department to map how the work is done before I recommend anything.</span></button></li>
+      <li><button type="button" class="step" aria-pressed="false" data-i="1"><b>Identify and prioritise the gaps</b><span>As a company scales, some work doesn’t sit with any team yet. I focus on the gaps that matter most to the business.</span></button></li>
+      <li><button type="button" class="step" aria-pressed="false" data-i="2"><b>Build the expertise</b><span>I’m often new to the subject. I research it, ask questions and get certified where I can.</span></button></li>
+      <li><button type="button" class="step" aria-pressed="false" data-i="3"><b>Implement with stakeholders</b><span>Nothing I’ve delivered was mine alone. A system only works when the people running it see why it’s worth it.</span></button></li>
     </ol>
     <div class="eg" id="eg" aria-live="polite">
       <p class="eg-label">At Master Components Limited</p>
@@ -41,38 +43,67 @@
       <p class="eg-item">I was new to ESG when I joined. I’ve since qualified as an internal auditor for three standards.</p>
       <p class="eg-item">Each of eight departments has its own ESG champion, so the system belongs to the people who run it.</p>
     </div>
-    <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
   </div></section>
 
-  <section class="cases" aria-labelledby="ch"><div class="wrap">
-    <h2 id="ch">Case study</h2>
-    <div class="card">
-      <div>
-        <h3>Master Components Limited</h3>
-        <p class="when">Nashik, January 2025 to now</p>
-        <p class="sum">A 27-year-old manufacturing company, listed in 2023 and growing fast. Three areas needed attention. I took on a project in each.</p>
-        <a class="btn" href="#master-components" data-go="case">Open the case <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-      <ul class="heads">
-        <li><b>40 to 55</b><span>EcoVadis score in one assessment cycle</span></li>
-        <li><b>First</b><span>MSME in Maharashtra certified Zero Waste to Landfill</span></li>
-        <li><b>95%</b><span>of employees take part in engagement programmes</span></li>
-      </ul>
+  <section class="cases" id="projects" aria-labelledby="ch"><div class="wrap">
+    <h2 id="ch">Projects</h2>
+    <p class="lead">All three are at Master Components Limited, where I have worked since January 2025.</p>
+    <div class="pgrid">
+      <article class="pcard"><h3>Branding &amp; Corporate Storytelling</h3><p class="gapline">The company’s story wasn’t being told.</p><p class="metric"><b>100 to 1,000+</b><span>LinkedIn followers</span></p><a class="btn" href="#brand" data-go="brand">Open project <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article>
+      <article class="pcard"><h3>Employee Engagement &amp; Culture Building</h3><p class="gapline">People had HR, but no engagement.</p><p class="metric"><b>95%</b><span>of employees take part</span></p><a class="btn" href="#engagement" data-go="engagement">Open project <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article>
+      <article class="pcard"><h3>ESG Strategy &amp; Implementation</h3><p class="gapline">ESG had no owner.</p><p class="metric"><b>40 to 55</b><span>EcoVadis score in one cycle</span></p><a class="btn" href="#esg" data-go="esg">Open project <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article>
     </div>
-    <p class="more">More cases will be added here as I take on new work.</p>
+    <div class="also">
+      <h3>Also working on</h3>
+      <dl class="pairs">
+        <div><dt>Organisation structure</dt><dd>Designing the company’s structure and functions with the VP and Strategy Head.</dd></div>
+        <div><dt>Employee stock options</dt><dd>Designing the ESOP with the Company Secretary and the Strategy Head.</dd></div>
+      </dl>
+    </div>
+  </div></section>
+
+  <section class="context" aria-labelledby="xh"><div class="wrap">
+    <h2 id="xh">The context</h2>
+    <div class="ctx">
+      <div>
+        <h3>The company</h3>
+        <p>Master Components Limited is based in Nashik. It manufactures plastic moulded components for other businesses, mostly for industrial, automotive and electrical applications.</p>
+        <p>A partnership founded in 1999, it became a listed company in 2023. Growth after the listing was rapid. New things kept getting added to the task list while everyone’s hands were already full.</p>
+      </div>
+      <div>
+        <h3>How I came in</h3>
+        <p>I’m part of the promoter family. That is a head start most people in the company never had, and I wanted to put it to the best possible use.</p>
+        <p>I had spent four years in London. When I saw how fast the company was growing and how much new work was piling up, I decided to move back to India. I wanted to test whether someone with no technical background could add value in a factory.</p>
+        <p>I had a platform most people don’t get. My job was to earn it.</p>
+      </div>
+      <div>
+        <h3>The resistance</h3>
+        <p>Most of my colleagues have spent 25 years in the company or the industry. Every project met pushback at first, because moving from MSME habits to corporate ones was unfamiliar.</p>
+        <p>What worked was showing the benefit in their terms. People followed the ESG systems once they saw those systems help us keep customers and win new ones. The townhalls earned their place once people felt the difference of two hours a month that weren’t about work.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="voices" aria-labelledby="vh"><div class="wrap">
+    <h2 id="vh">What colleagues say</h2>
+    <div class="quotes">
+      <blockquote><p>“You’re dedicated, honest and result-oriented. You make sure the work crosses the finish line, in its goals and in its purpose.”</p></blockquote>
+      <blockquote><p>“You deep-dive into everything you decide to do, and work on it till it’s perfect.”</p></blockquote>
+    </div>
   </div></section>
 
   <section class="before" aria-labelledby="bh"><div class="wrap">
-    <h2 id="bh">Before this</h2>
+    <h2 id="bh">Background</h2>
     <ul class="blist">
-      <li><time>2020 to 2023</time><b>Coventry University London</b><span>BA (Hons) Global Business Management, First Class. Moved to London alone at 17.</span></li>
-      <li><time>2022 to 2023</time><b>India Global Forum, London</b><span>Operations for international conferences, including UK-India Week 2023: speakers, registrations and guest logistics.</span></li>
       <li><time>2024</time><b>Natter, London</b><span>Partnerships for a wellbeing platform: 100+ influencers contacted, 20 to 30 partnerships developed.</span></li>
+      <li><time>2022 to 2023</time><b>India Global Forum, London</b><span>Operations for international conferences, including UK-India Week 2023: speakers, registrations and guest logistics.</span></li>
+      <li><time>2020 to 2023</time><b>Coventry University London</b><span>BA (Hons) Global Business Management, First Class. Moved to London alone at 17.</span></li>
     </ul>
   </div></section>
 
   <section class="contact" id="contact" aria-labelledby="kh"><div class="wrap">
     <h2 id="kh">Let’s talk.</h2>
+    <p>I’m open to the next project.</p>
     <div class="cta">
       <span class="addr" id="email">tanvijoshiwork@gmail.com</span>
       <button class="btn" type="button" id="copy">Copy email</button>
@@ -81,52 +112,55 @@
   </div></section>
 </div>
 
-<div data-view="case" id="master-components">
-  <nav class="rail" aria-label="Case sections"><div class="wrap">
-    <a class="btn plain sm" href="#top" data-go="home"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Back</a>
-    <div class="rail-links" id="rail">
-      <a href="#context">The Company</a><a href="#entry">How I came in</a><a href="#gaps">Gaps</a><a href="#beyond">Beyond</a><a href="#resistance">The Resistance</a><a href="#voices">What Colleagues say</a>
-    </div>
+<div data-view="brand" id="brand">
+  <nav class="rail" aria-label="Projects"><div class="wrap">
+    <a class="btn plain sm" href="#projects" data-go="home" data-then="projects"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Back</a>
+    <div class="rail-links"><a href="#brand" data-go="brand" class="cur" aria-current="page">Branding</a><a href="#engagement" data-go="engagement">Engagement</a><a href="#esg" data-go="esg">ESG</a></div>
   </div></nav>
   <section class="screen"><div class="wrap split">
     <div class="col case-head">
-      <p class="kicker">Case study, January 2025 to now</p>
-      <h1>Master Components Limited</h1>
-      <p class="dek">A partnership manufacturing company founded in 1999 became a listed company in 2023. I joined to take on the work that change brought with it.</p>
+      <p class="kicker">Master Components Limited, January 2025 to now</p>
+      <h1>Branding &amp; Corporate Storytelling</h1>
+      <p class="dek"><b>The gap I saw</b>The company’s story wasn’t being told.</p>
     </div>
-    <div class="col chapter panel" id="context">
-      <h2>Where the company was</h2>
-      <p>Master Components Limited is based in Nashik. It manufactures plastic moulded components for other businesses, mostly for industrial, automotive and electrical applications.</p>
-      <p>Growth after the listing was rapid. New things kept getting added to the task list while everyone’s hands were already full. What a listed company owes the outside world, in how it communicates, complies and looks after its people, was new to almost everyone.</p>
-    </div>
-  </div></section>
-
-  <section class="screen tint"><div class="wrap split">
-    <div class="col chapter" id="entry">
-      <h2>How I came in</h2>
-      <p>I’m part of the promoter family. That is a head start most people in the company never had, and I wanted to put it to the best possible use.</p>
-      <p>I had spent four years in London. When I saw how fast the company was growing and how much new work was piling up, I decided to move back to India. I wanted to test whether someone with no technical background could add value in a factory.</p>
-      <p>I had a platform most people don’t get. My job was to earn it.</p>
-    </div>
-    <div class="col chapter" id="weeks">
-      <h2>My first weeks</h2>
-      <p>I went department by department to learn what each one does and how it runs. I wasn’t looking for a role. I was looking for work that mattered to the company and belonged to no one.</p>
-      <p>Three gaps stood out.</p>
+    <div class="col chapter panel">
+      <h2>Background</h2>
+      <p>The company had a website and a LinkedIn page with about 100 followers. LinkedIn was used for festival greetings.</p>
     </div>
   </div></section>
-
-  <section class="wrap gaps" id="gaps" aria-labelledby="gh">
-    <h2 id="gh">Gaps</h2>
-<article class="gap" id="gap1">
-  <header><h3>The company’s story wasn’t being told</h3></header>
-  <dl class="rows"><div class="row"><dt>What I noticed</dt><dd>A 27-year journey, and nobody telling it. LinkedIn was used for festival greetings.</dd></div><div class="row"><dt>Why it mattered</dt><dd>A listed company has shareholders, customers and suppliers who need to know where it came from and where it’s going. So do the people deciding whether to partner with it or apply for a job there.</dd></div><div class="row"><dt>What I did</dt><dd><ul><li>Rebuilt the brand around the journey: story, vision, mission, colours and tone</li><li>Revamped the website and the leadership’s visiting cards</li><li>Turned LinkedIn into the place where shareholders, customers and partners follow the business</li><li>Designed and reviewed the entire annual report with the Company Secretary’s team</li><li>Built 30+ leadership decks, including the AGM deck</li></ul></dd></div><div class="row"><dt>Measured by</dt><dd><ul class="measures"><li><b>+40%</b> website traffic after the relaunch</li><li><b>100 to 1,000+</b> LinkedIn followers</li></ul></dd></div></dl>
-  <figure class="shot"><img src="img/web.jpg" alt="The redesigned Master Group website home page" loading="lazy"><figcaption>The relaunched website, <a href="https://master-group.in" target="_blank" rel="noopener noreferrer">master-group.in</a></figcaption></figure>
-  <p class="effect"><b>What changed for the company</b>The company now tells one story everywhere: on its website, on LinkedIn and in its annual report. Shareholders, customers and partners can follow what the business is doing.</p>
-</article>
-<article class="gap" id="gap2">
-  <header><h3>People had HR, but no engagement</h3></header>
-  <dl class="rows"><div class="row"><dt>What I noticed</dt><dd>Processes ran, but there was nowhere to be heard, celebrate a win or switch off for two hours.</dd></div><div class="row"><dt>Why it mattered</dt><dd>It makes people feel part of the family. A few unfiltered conversations help you loosen up and get comfortable with the people around you. It’s also the one place where people who don’t work in cross-functional teams meet colleagues from other departments.</dd></div><div class="row"><dt>What I did</dt><dd><ul><li>Started monthly townhalls, Employee of the Quarter and company-wide celebrations</li><li>Launched the group’s first sports league</li><li>Opened one-on-ones to every employee</li><li>Rebuilt onboarding, then an automated open-positions tracker with a dashboard</li><li>Now leading the appraisal system and code of conduct, with my HR team</li></ul></dd></div><div class="row"><dt>Measured by</dt><dd><ul class="measures"><li><b>95%</b> of employees take part</li><li><b>12</b> townhalls a year</li></ul></dd></div></dl>
-  <div class="slider events" data-slider aria-roledescription="carousel" aria-label="Engagement events">
+  <section class="wrap gaps">
+    <article class="gap">
+      <dl class="rows"><div class="row"><dt>What I noticed</dt><dd>A 27-year journey from a partnership to a listed company, and nobody telling it.</dd></div><div class="row"><dt>Why it mattered</dt><dd>A listed company has shareholders, customers and suppliers who need to know where it came from and where it’s going. So do the people deciding whether to partner with it or apply for a job there.</dd></div><div class="row"><dt>What I did</dt><dd><ul><li>Rebuilt the brand around the journey: story, vision, mission, colours and tone</li><li>Revamped the website and the leadership’s visiting cards</li><li>Turned LinkedIn into the place where shareholders, customers and partners follow the business</li><li>Designed and reviewed the entire annual report with the Company Secretary’s team</li><li>Built 30+ leadership decks, including the AGM deck</li></ul></dd></div><div class="row"><dt>Measured by</dt><dd><ul class="measures"><li><b>+40%</b> website traffic after the relaunch</li><li><b>100 to 1,000+</b> LinkedIn followers</li></ul></dd></div></dl>
+      <div class="proof"><figure class="shot"><img src="img/web.jpg" alt="The redesigned Master Group website home page" loading="lazy"><figcaption>The relaunched website, <a href="https://master-group.in" target="_blank" rel="noopener noreferrer">master-group.in</a></figcaption></figure></div>
+      <p class="effect"><b>What changed for the company</b>The company now tells one story everywhere: on its website, on LinkedIn and in its annual report. Shareholders, customers and partners can follow what the business is doing.</p>
+    </article>
+  </section>
+  <section class="case-end"><div class="wrap">
+    <p class="nextlabel">Next project</p>
+    <h2>Employee Engagement &amp; Culture Building</h2>
+    <div class="cta"><a class="btn" href="#engagement" data-go="engagement">Open project <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn plain" href="#projects" data-go="home" data-then="projects"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> All projects</a></div>
+  </div></section>
+</div>
+<div data-view="engagement" id="engagement">
+  <nav class="rail" aria-label="Projects"><div class="wrap">
+    <a class="btn plain sm" href="#projects" data-go="home" data-then="projects"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Back</a>
+    <div class="rail-links"><a href="#brand" data-go="brand">Branding</a><a href="#engagement" data-go="engagement" class="cur" aria-current="page">Engagement</a><a href="#esg" data-go="esg">ESG</a></div>
+  </div></nav>
+  <section class="screen"><div class="wrap split">
+    <div class="col case-head">
+      <p class="kicker">Master Components Limited, January 2025 to now</p>
+      <h1>Employee Engagement &amp; Culture Building</h1>
+      <p class="dek"><b>The gap I saw</b>People had HR, but no engagement.</p>
+    </div>
+    <div class="col chapter panel">
+      <h2>Background</h2>
+      <p>The company had an HR function, and its processes ran.</p>
+    </div>
+  </div></section>
+  <section class="wrap gaps">
+    <article class="gap">
+      <dl class="rows"><div class="row"><dt>What I noticed</dt><dd>There was nowhere to be heard, celebrate a win or switch off for two hours.</dd></div><div class="row"><dt>Why it mattered</dt><dd>It makes people feel part of the family. A few unfiltered conversations help you loosen up and get comfortable with the people around you. It’s also the one place where people who don’t work in cross-functional teams meet colleagues from other departments.</dd></div><div class="row"><dt>What I did</dt><dd><ul><li>Started monthly townhalls, Employee of the Quarter and company-wide celebrations</li><li>Launched the group’s first sports league</li><li>Opened one-on-ones to every employee</li><li>Rebuilt onboarding, then an automated open-positions tracker with a dashboard</li><li>Now leading the appraisal system and code of conduct, with my HR team</li></ul></dd></div><div class="row"><dt>Measured by</dt><dd><ul class="measures"><li><b>95%</b> of employees take part</li><li><b>12</b> townhalls a year</li></ul></dd></div></dl>
+      <div class="proof"><div class="slider events" data-slider aria-roledescription="carousel" aria-label="Engagement events">
   <div class="s-track" tabindex="0">
     <figure class="slide"><img src="img/mplgroup.jpg" alt="Around sixty employees in team shirts and caps at the cricket ground" loading="lazy" class="op45"><figcaption><b>Master Premier League</b><span>The group’s first sports league.</span></figcaption></figure>
     <figure class="slide"><img src="img/eng-foundation-day.jpg" alt="Employees gathered at the factory gate for Foundation Day" loading="lazy" class="op40"><figcaption><b>Foundation Day</b><span>The whole company, every department.</span></figcaption></figure>
@@ -140,13 +174,36 @@
     <figure class="slide"><img src="img/eng-leadership-dinner.jpg" alt="The leadership team and families in a group photo" loading="lazy" class="op45"><figcaption><b>Leadership dinner</b><span>For the leadership team and their families.</span></figcaption></figure>
   </div>
   <div class="s-nav"><button type="button" class="s-btn s-prev" aria-label="Previous"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="s-count" aria-live="polite">1 / 10</span><button type="button" class="s-btn s-next" aria-label="Next"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+</div></div>
+      <p class="effect"><b>What changed for the company</b>People from different departments now know each other. In the engagement survey I ran, employees said they value the time the company sets aside for it.</p>
+    </article>
+  </section>
+  <section class="case-end"><div class="wrap">
+    <p class="nextlabel">Next project</p>
+    <h2>ESG Strategy &amp; Implementation</h2>
+    <div class="cta"><a class="btn" href="#esg" data-go="esg">Open project <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn plain" href="#projects" data-go="home" data-then="projects"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> All projects</a></div>
+  </div></section>
 </div>
-  <p class="effect"><b>What changed for the company</b>People from different departments now know each other. In the engagement survey I ran, employees said they value the time the company sets aside for it.</p>
-</article>
-<article class="gap" id="gap3">
-  <header><h3>ESG had no owner</h3></header>
-  <dl class="rows"><div class="row"><dt>What I noticed</dt><dd>One customer had asked for an EcoVadis assessment. Earlier attempts hadn’t gone far, and I didn’t know what ESG was either.</dd></div><div class="row"><dt>Why it mattered</dt><dd>Customers had started asking for ESG ratings. Meeting them protects the business we have and helps win more.</dd></div><div class="row"><dt>What I did</dt><dd><ul><li>Learned ESG from scratch, then scoped the programme and its resources</li><li>Appointed a champion in each of eight departments, so the work runs without pulling in department heads daily</li><li>Took the company through Zero Waste to Landfill in three months</li><li>Extended the GHG inventory to Scope 1, 2 and 3, independently verified</li><li>Qualified as a certified internal auditor for ISO 14001, ISO 45001 and IATF 16949</li><li>Studied SEBI’s BRSR framework, worked out what applied to us, and prepared the voluntary BRSR section of the annual report with the Company Secretary’s team</li><li>Now building one management system for every certification</li></ul></dd></div><div class="row"><dt>Measured by</dt><dd><ul class="measures"><li><b>40 to 55</b> EcoVadis score in one cycle</li><li><b>First</b> MSME in Maharashtra certified Zero Waste to Landfill, now Gold</li><li><b>0</b> non-conformities in the ISO 14001 and 45001 audit</li><li><b>₹25L+</b> saved by negotiating every ESG quotation</li></ul></dd></div></dl>
-  <div class="slider certs" data-slider aria-roledescription="carousel" aria-label="Certificates">
+<div data-view="esg" id="esg">
+  <nav class="rail" aria-label="Projects"><div class="wrap">
+    <a class="btn plain sm" href="#projects" data-go="home" data-then="projects"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Back</a>
+    <div class="rail-links"><a href="#brand" data-go="brand">Branding</a><a href="#engagement" data-go="engagement">Engagement</a><a href="#esg" data-go="esg" class="cur" aria-current="page">ESG</a></div>
+  </div></nav>
+  <section class="screen"><div class="wrap split">
+    <div class="col case-head">
+      <p class="kicker">Master Components Limited, January 2025 to now</p>
+      <h1>ESG Strategy &amp; Implementation</h1>
+      <p class="dek"><b>The gap I saw</b>ESG had no owner.</p>
+    </div>
+    <div class="col chapter panel">
+      <h2>Background</h2>
+      <p>In October 2024, before I joined, a customer asked the company for an EcoVadis assessment. It scored 40. Earlier attempts at ESG hadn’t gone far.</p>
+    </div>
+  </div></section>
+  <section class="wrap gaps">
+    <article class="gap">
+      <dl class="rows"><div class="row"><dt>What I noticed</dt><dd>There was a score, but no programme behind it. I didn’t know what ESG was either.</dd></div><div class="row"><dt>Why it mattered</dt><dd>Customers had started asking for ESG ratings. Meeting them protects the business we have and helps win more.</dd></div><div class="row"><dt>What I did</dt><dd><ul><li>Learned ESG from scratch, then scoped the programme and its resources</li><li>Appointed a champion in each of eight departments, so the work runs without pulling in department heads daily</li><li>Took the company through Zero Waste to Landfill in three months</li><li>Extended the GHG inventory to Scope 1, 2 and 3, independently verified</li><li>Qualified as a certified internal auditor for ISO 14001, ISO 45001 and IATF 16949</li><li>Studied SEBI’s BRSR framework, worked out what applied to us, and prepared the voluntary BRSR section of the annual report with the Company Secretary’s team</li><li>Now building one management system for every certification</li></ul></dd></div><div class="row"><dt>Measured by</dt><dd><ul class="measures"><li><b>40 to 55</b> EcoVadis score in one cycle</li><li><b>First</b> MSME in Maharashtra certified Zero Waste to Landfill, now Gold</li><li><b>0</b> non-conformities in the ISO 14001 and 45001 audit</li><li><b>₹25L+</b> saved by negotiating every ESG quotation</li></ul></dd></div></dl>
+      <div class="proof"><div class="slider certs" data-slider aria-roledescription="carousel" aria-label="Certificates">
   <div class="s-track" tabindex="0">
     <figure class="slide cert"><img src="img/cert-zwl-gold.jpg" alt="TÜV SÜD certificate for Zero Waste, maturity level Gold" loading="lazy"><figcaption><b>Zero Waste to Landfill, Gold</b><span>TÜV SÜD, DIN SPEC 91436</span></figcaption></figure>
     <figure class="slide cert"><img src="img/cert-ghg-14064.jpg" alt="BSCIC verification statement for the greenhouse gas inventory" loading="lazy"><figcaption><b>GHG inventory, verified</b><span>BSCIC, ISO 14064-1</span></figcaption></figure>
@@ -154,37 +211,14 @@
     <figure class="slide cert"><img src="img/cert-iso45001.jpg" alt="BSCIC certificate for ISO 45001" loading="lazy"><figcaption><b>Health and safety management</b><span>BSCIC, ISO 45001</span></figcaption></figure>
   </div>
   <div class="s-nav"><button type="button" class="s-btn s-prev" aria-label="Previous"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="s-count" aria-live="polite">1 / 4</span><button type="button" class="s-btn s-next" aria-label="Next"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
-</div>
-  <p class="effect"><b>What changed for the company</b>One customer asking became several, and the company could answer each one. New business prospects now count ESG in our favour.</p>
-</article>
+</div></div>
+      <p class="effect"><b>What changed for the company</b>One customer asking became several, and the company could answer each one. New business prospects now count ESG in our favour.</p>
+    </article>
   </section>
-
-  <section class="chapter" id="beyond"><div class="wrap narrow">
-    <h2>Beyond the three gaps</h2>
-    <p>Two cross-functional projects I work on with senior leadership.</p>
-    <dl class="pairs">
-      <div><dt>Organisation structure</dt><dd>Designing the company’s structure and functions with the VP and Strategy Head.</dd></div>
-      <div><dt>Employee stock options</dt><dd>Designing the ESOP with the Company Secretary and the Strategy Head.</dd></div>
-    </dl>
-  </div></section>
-
-  <section class="chapter tint" id="resistance"><div class="wrap narrow">
-    <h2>The resistance</h2>
-    <p>Most of my colleagues have spent 25 years in the company or the industry. Every project met pushback at first, because moving from MSME habits to corporate ones was unfamiliar.</p>
-    <p>What worked was showing the benefit in their terms. People followed the ESG systems once they saw those systems help us keep customers and win new ones. The townhalls earned their place once people felt the difference of two hours a month that weren’t about work.</p>
-  </div></section>
-
-  <section class="chapter" id="voices"><div class="wrap narrow">
-    <h2>What colleagues say</h2>
-    <div class="quotes">
-      <blockquote><p>“You’re dedicated, honest and result-oriented. You make sure the work crosses the finish line, in its goals and in its purpose.”</p></blockquote>
-      <blockquote><p>“You deep-dive into everything you decide to do, and work on it till it’s perfect.”</p></blockquote>
-    </div>
-  </div></section>
-
   <section class="case-end"><div class="wrap">
-    <h2><span>This is one case.</span> <span>I’m open to the next.</span></h2>
-    <div class="cta"><a class="btn" href="#contact" data-go="home" data-then="contact">Get in touch</a><a class="btn plain" href="#top" data-go="home"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Back to the start</a></div>
+    <p class="nextlabel">Next project</p>
+    <h2>Branding &amp; Corporate Storytelling</h2>
+    <div class="cta"><a class="btn" href="#brand" data-go="brand">Open project <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn plain" href="#projects" data-go="home" data-then="projects"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> All projects</a></div>
   </div></section>
 </div>
 

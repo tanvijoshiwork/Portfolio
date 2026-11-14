@@ -11,31 +11,14 @@
   document.addEventListener('click',function(e){
     var a=e.target.closest('[data-go]');if(!a)return;e.preventDefault();
     var name=a.getAttribute('data-go');show(name,a.getAttribute('data-then'));
-    try{history.replaceState(null,'',name==='case'?'#master-components':'#')}catch(x){}
+    try{history.replaceState(null,'',name==='home'?'#':'#'+name)}catch(x){}
   });
   var h0=location.hash.slice(1),t0=h0&&document.getElementById(h0);
-  if(t0&&t0.closest('[data-view="case"]'))show('case',h0==='master-components'?null:h0);
+  var v0=t0&&t0.closest('[data-view]');if(v0&&v0.getAttribute('data-view')!=='home')show(v0.getAttribute('data-view'),t0===v0?null:h0);
   // method steps: pick a step, see it in the case
   var steps=document.querySelectorAll('.step'),egs=document.querySelectorAll('.eg-item');
-  var method=document.querySelector('.method'),dots=document.querySelectorAll('.dots i'),cur=0,pinQ=matchMedia('(min-height:540px)');
-  function setStep(i){cur=i;steps.forEach(function(x,j){x.setAttribute('aria-pressed',j===i)});egs.forEach(function(e,j){e.classList.toggle('on',j===i)});dots.forEach(function(d,j){d.classList.toggle('on',j<=i)})}
-  function pinned(){return method.classList.contains('pin')}
-  function span(){return method.offsetHeight-innerHeight}
-  function track(){if(!pinned()||!method.offsetParent)return;var p=-method.getBoundingClientRect().top/span(),i=Math.max(0,Math.min(3,Math.floor(p*4)));if(i!==cur)setStep(i)}
-  function pinSet(){method.classList.toggle('pin',pinQ.matches);track()}
-  pinSet();if(pinQ.addEventListener)pinQ.addEventListener('change',pinSet);
-  var tr;addEventListener('scroll',function(){cancelAnimationFrame(tr);tr=requestAnimationFrame(track)},{passive:true});
-  steps.forEach(function(b){b.addEventListener('click',function(){var i=+b.getAttribute('data-i');
-    if(pinned())scrollTo({top:method.getBoundingClientRect().top+scrollY+span()*(i+.5)/4});else setStep(i)})});
-  // case rail: mark the section being read
-  var rail=document.getElementById('rail'),links=rail.querySelectorAll('a'),map={};
-  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var a=map[e.target.id];if(!a)return;
-      links.forEach(function(x){x.classList.toggle('cur',x===a)});
-      rail.scrollTo({left:a.offsetLeft-rail.clientWidth/2+a.offsetWidth/2})})},{rootMargin:'-25% 0px -65% 0px'});
-    Object.keys(map).forEach(function(id){var t=document.getElementById(id);if(t)io.observe(t)});
-  }
+  function setStep(i){steps.forEach(function(x,j){x.setAttribute('aria-pressed',j===i)});egs.forEach(function(e,j){e.classList.toggle('on',j===i)})}
+  steps.forEach(function(b){b.addEventListener('click',function(){setStep(+b.getAttribute('data-i'))})});
   document.querySelectorAll('[data-slider]').forEach(function(box){
     var t=box.querySelector('.s-track'),sl=t.children,p=box.querySelector('.s-prev'),n=box.querySelector('.s-next'),c=box.querySelector('.s-count');
     function step(){return sl[0]?sl[0].getBoundingClientRect().width+16:1}
@@ -50,7 +33,7 @@
   });
   // motion, skipped when the reader has asked for reduced motion
   if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
-    var rv=document.querySelectorAll('.cases .card,.blist li,.chapter .wrap,.screen .col,.gap,.quotes blockquote,.case-end');
+    var rv=document.querySelectorAll('.pcard,.also,.ctx>div,.blist li,.screen .col,.gap,.quotes blockquote,.case-end');
     var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
     rv.forEach(function(el){el.classList.add('rv');ro.observe(el)});
     function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,',')}
@@ -60,7 +43,7 @@
       function tick(t){if(t0===null)t0=t;var k=Math.min(1,(t-t0)/1100),v=Math.round(from+(to-from)*(1-Math.pow(1-k,3)));
         el.textContent=pre+fmt(v)+m[5];if(k<1)requestAnimationFrame(tick);else el.textContent=full}
       requestAnimationFrame(tick)})},{threshold:.6});
-    document.querySelectorAll('.measures b,.heads b').forEach(function(el){co.observe(el)});
+    document.querySelectorAll('.measures b,.metric b').forEach(function(el){co.observe(el)});
   }
   var b=document.getElementById('copy'),em=document.getElementById('email');
   b.addEventListener('click',function(){
